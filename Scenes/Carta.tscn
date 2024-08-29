@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://07igjj26p6nv"]
+
+[ext_resource type="Texture2D" uid="uid://sde0swdhtxnb" path="res://Assets/Cards/Chama no zap! Post para instagram. Arte para pedidos online. Lettering em Português do Brasil. Editável (1).png" id="1_yvl7n"]
+[ext_resource type="Texture2D" uid="uid://185i444pbnqx" path="res://Assets/Cards/CuteCards.png" id="2_1s1pd"]
+[ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="3_11v3b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0hd3"]
+atlas = ExtResource("2_1s1pd")
+region = Rect2(1404, 148, 92, 136)
+
+[node name="Carta" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 185.0
+offset_top = 35.0
+offset_right = 185.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="Button"]
+visible = false
+custom_minimum_size = Vector2(450, 670)
+layout_mode = 0
+offset_left = -12.0
+offset_top = 108.0
+offset_right = 1068.0
+offset_bottom = 1428.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_yvl7n")
+
+[node name="TextureRect2" type="TextureRect" parent="Button"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 13.0
+offset_right = 189.0
+offset_bottom = 149.0
+texture = SubResource("AtlasTexture_t0hd3")
+
+[node name="Label" type="Label" parent="Button/TextureRect2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 21.0
+offset_right = 72.0
+offset_bottom = 44.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_11v3b")
+text = "palavra"

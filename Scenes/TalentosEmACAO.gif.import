@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://b3a5p06bp08dk"
+path="res://.godot/imported/TalentosEmACAO.gif-dbb918d9b4a346739c080d125f49419b.tres"
+
+[deps]
+
+source_file="res://Scenes/TalentosEmACAO.gif"
+dest_files=["res://.godot/imported/TalentosEmACAO.gif-dbb918d9b4a346739c080d125f49419b.tres"]
+
+[params]
+
+frames_per_second=30

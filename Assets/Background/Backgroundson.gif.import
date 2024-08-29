@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://dkra2e87her65"
+path="res://.godot/imported/Backgroundson.gif-f4f1d3241271dcddbeb0909894ade928.tres"
+
+[deps]
+
+source_file="res://Assets/Background/Backgroundson.gif"
+dest_files=["res://.godot/imported/Backgroundson.gif-f4f1d3241271dcddbeb0909894ade928.tres"]
+
+[params]
+
+frames_per_second=30
