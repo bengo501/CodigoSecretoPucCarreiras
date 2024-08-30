@@ -1,5 +1,6 @@
 extends Control
 
+# Ola
 func _ready():
 	var button = Button.new()
 	button.text = "Começar"
