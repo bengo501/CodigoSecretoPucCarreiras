@@ -1,0 +1,386 @@
+[gd_scene load_steps=6 format=3 uid="uid://e2pjtaep7qr"]
+
+[ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_05443"]
+[ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="2_2w8gg"]
+[ext_resource type="Texture2D" uid="uid://cirx31n4mmawj" path="res://Assets/button_square_border.png" id="3_q83te"]
+[ext_resource type="PackedScene" uid="uid://07igjj26p6nv" path="res://Scenes/Cartas/Carta.tscn" id="4_h7iqj"]
+[ext_resource type="PackedScene" uid="uid://cdui21e8qi6lj" path="res://Scenes/CenasJogo/Cronometro.tscn" id="5_rwo3j"]
+
+[node name="GameScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 15.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0, 0.866667, 0.780392, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -4.0
+offset_right = -12.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("1_05443")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 27.0
+scale = Vector2(2, 2)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2w8gg")
+text = "Vez Time: "
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0.670588, 1, 0.996078, 0.854902)
+layout_mode = 0
+offset_left = 137.0
+offset_top = 52.0
+offset_right = 1097.0
+offset_bottom = 140.0
+texture = ExtResource("3_q83te")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+modulate = Color(0.670588, 1, 0.996078, 0.854902)
+layout_mode = 0
+offset_left = 133.0
+offset_top = 153.0
+offset_right = 1093.0
+offset_bottom = 241.0
+texture = ExtResource("3_q83te")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+modulate = Color(0.670588, 1, 0.996078, 0.854902)
+layout_mode = 0
+offset_left = 134.0
+offset_top = 258.0
+offset_right = 1094.0
+offset_bottom = 346.0
+texture = ExtResource("3_q83te")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+modulate = Color(0.670588, 1, 0.996078, 0.854902)
+layout_mode = 0
+offset_left = 137.0
+offset_top = 363.0
+offset_right = 1097.0
+offset_bottom = 451.0
+texture = ExtResource("3_q83te")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+modulate = Color(0.670588, 1, 0.996078, 0.854902)
+layout_mode = 0
+offset_left = 138.0
+offset_top = 471.0
+offset_right = 1098.0
+offset_bottom = 559.0
+texture = ExtResource("3_q83te")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(10, 10)
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -7.0
+offset_right = 89.0
+offset_bottom = 13.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 19.0
+offset_right = 1390.0
+offset_bottom = 751.0
+scale = Vector2(0.75, 0.75)
+
+[node name="GridContainer" type="GridContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta5" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta6" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta7" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta8" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta4" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta3" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta2" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="GridContainer6" type="GridContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta5" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta6" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta7" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta8" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta4" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta3" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta2" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="GridContainer5" type="GridContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta5" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta6" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta7" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta8" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta4" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta3" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta2" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="GridContainer2" type="GridContainer" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_direction = 2
+layout_mode = 2
+theme_override_constants/h_separation = 21
+theme_override_constants/v_separation = -8
+columns = 8
+
+[node name="Carta" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta5" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta6" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta7" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta4" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta3" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta2" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="GridContainer4" type="GridContainer" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_direction = 2
+layout_mode = 2
+theme_override_constants/h_separation = 21
+theme_override_constants/v_separation = -8
+columns = 8
+
+[node name="Carta" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta5" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta6" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta7" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta4" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta3" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta2" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TalvezApagar" type="GridContainer" parent="Control/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(150, 150)
+layout_direction = 2
+layout_mode = 2
+theme_override_constants/h_separation = 21
+theme_override_constants/v_separation = -8
+columns = 8
+
+[node name="Carta" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta5" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta6" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta7" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta4" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta3" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta2" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Cronometro" parent="Control/VBoxContainer" instance=ExtResource("5_rwo3j")]
+visible = false
+position = Vector2(-180, -18.6667)

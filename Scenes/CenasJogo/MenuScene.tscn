@@ -1,0 +1,209 @@
+[gd_scene load_steps=12 format=3 uid="uid://78y6t5hey74f"]
+
+[ext_resource type="Script" path="res://Scripts/Control.gd" id="1_yukmi"]
+[ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="2_ftb06"]
+[ext_resource type="Texture2D" uid="uid://dbywwvj1kjked" path="res://Assets/Logos/Logo-Pucrs.png" id="3_hk1i2"]
+[ext_resource type="Texture2D" uid="uid://b3e0tf4ly21nd" path="res://Assets/Logos/logo-light.png" id="4_qapfu"]
+[ext_resource type="Texture2D" uid="uid://b603oaq2sdl6p" path="res://Assets/Logos/Brasão_PUCRS.png" id="5_5x6xl"]
+[ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="6_j82pc"]
+[ext_resource type="Animation" uid="uid://df7a17j0ir7xw" path="res://Assets/Animations/fade_out.res" id="7_stuad"]
+[ext_resource type="SpriteFrames" uid="uid://clra12ylisy16" path="res://Assets/Logos/TalentosEmACAO.gif" id="8_f6mqa"]
+
+[sub_resource type="Theme" id="Theme_pfr0l"]
+default_base_scale = 2.0
+
+[sub_resource type="Animation" id="Animation_tidr3"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_53j4w"]
+_data = {
+"RESET": SubResource("Animation_tidr3"),
+"fade_out": ExtResource("7_stuad")
+}
+
+[node name="MenuScene" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_yukmi")
+
+[node name="Background" type="TextureRect" parent="Control"]
+modulate = Color(0.188235, 1, 1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -28.0
+offset_right = 1160.0
+offset_bottom = 611.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ftb06")
+stretch_mode = 1
+
+[node name="LogoPUCRS3" type="TextureRect" parent="Control"]
+modulate = Color(0.572549, 0.572549, 0.572549, 1)
+layout_mode = 0
+offset_left = 842.0
+offset_top = -65.0
+offset_right = 2085.0
+offset_bottom = 1155.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_hk1i2")
+
+[node name="LogoPUCRS" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 839.0
+offset_top = -64.0
+offset_right = 2020.0
+offset_bottom = 1117.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_hk1i2")
+
+[node name="LogoPUCRS4" type="TextureRect" parent="Control"]
+modulate = Color(0.517647, 0.517647, 0.517647, 1)
+layout_mode = 0
+offset_left = -12.0
+offset_top = 210.0
+offset_right = 1169.0
+offset_bottom = 1391.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_hk1i2")
+
+[node name="LogoPUCRS2" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 205.0
+offset_right = 1161.0
+offset_bottom = 1386.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_hk1i2")
+
+[node name="LogoVHLAB" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 507.0
+offset_right = 5102.0
+offset_bottom = 2357.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("4_qapfu")
+
+[node name="LogoPucrs3" type="TextureRect" parent="Control"]
+modulate = Color(0.443137, 0.443137, 0.443137, 1)
+layout_mode = 0
+offset_left = 43.0
+offset_right = 3683.0
+offset_bottom = 4257.0
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("5_5x6xl")
+
+[node name="LogoPucrs" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = -8.0
+offset_right = 3668.0
+offset_bottom = 4249.0
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("5_5x6xl")
+
+[node name="LogoPucrs4" type="TextureRect" parent="Control"]
+modulate = Color(0.388235, 0.388235, 0.388235, 1)
+layout_mode = 0
+offset_left = 904.0
+offset_top = 259.0
+offset_right = 4544.0
+offset_bottom = 4516.0
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("5_5x6xl")
+
+[node name="LogoPucrs2" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 889.0
+offset_top = 252.0
+offset_right = 4529.0
+offset_bottom = 4509.0
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("5_5x6xl")
+
+[node name="Caixa2" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 231.0
+offset_right = 824.0
+offset_bottom = 612.0
+theme = SubResource("Theme_pfr0l")
+color = Color(0.145098, 0.301961, 0.603922, 1)
+
+[node name="Caixa" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 245.0
+offset_right = 799.0
+offset_bottom = 597.0
+theme = SubResource("Theme_pfr0l")
+
+[node name="Créditos" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 561.0
+offset_right = 155.0
+offset_bottom = 584.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_j82pc")
+theme_override_font_sizes/font_size = 36
+text = "Criado por:"
+
+[node name="TítuloJogo" type="Label" parent="Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 364.0
+offset_top = 341.0
+offset_right = 790.0
+offset_bottom = 425.0
+theme_override_fonts/font = ExtResource("6_j82pc")
+theme_override_font_sizes/font_size = 63
+text = "Código secreto
+"
+
+[node name="BotaoComecar" type="Button" parent="Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 523.0
+offset_top = 474.0
+offset_right = 600.0
+offset_bottom = 505.0
+text = "Começar"
+
+[node name="BotaoComecar2" type="Button" parent="Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 525.0
+offset_top = 511.0
+offset_right = 602.0
+offset_bottom = 542.0
+text = "Começar"
+
+[node name="BotaoComecar3" type="Button" parent="Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 526.0
+offset_top = 551.0
+offset_right = 603.0
+offset_bottom = 582.0
+text = "Começar"
+
+[node name="fade_out" type="AnimationPlayer" parent="Control"]
+libraries = {
+"": SubResource("AnimationLibrary_53j4w")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(578.875, 107.375)
+scale = Vector2(1.30663, 1.21032)
+sprite_frames = ExtResource("8_f6mqa")
+animation = &"gif"
+frame_progress = 0.441712
