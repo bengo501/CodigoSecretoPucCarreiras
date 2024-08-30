@@ -18,7 +18,7 @@ offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BG" type="TextureRect" parent="."]
 modulate = Color(0, 0.866667, 0.780392, 1)
 layout_mode = 1
 anchors_preset = 15
@@ -35,62 +35,76 @@ texture = ExtResource("1_05443")
 expand_mode = 2
 stretch_mode = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="TurnoVermelho" type="Label" parent="."]
 layout_mode = 0
 offset_right = 158.0
 offset_bottom = 27.0
 scale = Vector2(2, 2)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2w8gg")
-text = "Vez Time: "
+theme_override_font_sizes/font_size = 28
+text = "Turno: Vermelho"
+
+[node name="TurnoAzul" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 27.0
+scale = Vector2(2, 2)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2w8gg")
+theme_override_font_sizes/font_size = 28
+text = "Turno: Azul"
+
+[node name="Aviso" type="Label" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 581.0
+offset_right = 579.0
+offset_bottom = 609.0
+scale = Vector2(2, 2)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2w8gg")
+theme_override_font_sizes/font_size = 33
+text = "Escolha uma carta!"
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 modulate = Color(0.670588, 1, 0.996078, 0.854902)
 layout_mode = 0
-offset_left = 137.0
-offset_top = 52.0
-offset_right = 1097.0
-offset_bottom = 140.0
+offset_left = 280.0
+offset_top = 73.0
+offset_right = 859.0
+offset_bottom = 150.0
 texture = ExtResource("3_q83te")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="."]
 modulate = Color(0.670588, 1, 0.996078, 0.854902)
 layout_mode = 0
-offset_left = 133.0
-offset_top = 153.0
-offset_right = 1093.0
-offset_bottom = 241.0
-texture = ExtResource("3_q83te")
-expand_mode = 1
-
-[node name="TextureRect4" type="TextureRect" parent="."]
-modulate = Color(0.670588, 1, 0.996078, 0.854902)
-layout_mode = 0
-offset_left = 134.0
-offset_top = 258.0
-offset_right = 1094.0
-offset_bottom = 346.0
+offset_left = 294.0
+offset_top = 212.0
+offset_right = 868.0
+offset_bottom = 289.0
 texture = ExtResource("3_q83te")
 expand_mode = 1
 
 [node name="TextureRect5" type="TextureRect" parent="."]
 modulate = Color(0.670588, 1, 0.996078, 0.854902)
 layout_mode = 0
-offset_left = 137.0
-offset_top = 363.0
-offset_right = 1097.0
-offset_bottom = 451.0
+offset_left = 290.0
+offset_top = 333.0
+offset_right = 893.0
+offset_bottom = 409.0
 texture = ExtResource("3_q83te")
 expand_mode = 1
 
 [node name="TextureRect6" type="TextureRect" parent="."]
 modulate = Color(0.670588, 1, 0.996078, 0.854902)
 layout_mode = 0
-offset_left = 138.0
-offset_top = 471.0
-offset_right = 1098.0
-offset_bottom = 559.0
+offset_left = 280.0
+offset_top = 483.0
+offset_right = 922.0
+offset_bottom = 547.0
 texture = ExtResource("3_q83te")
 expand_mode = 1
 
@@ -104,283 +118,119 @@ offset_bottom = 13.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 0
-offset_left = 121.0
-offset_top = 19.0
-offset_right = 1390.0
-offset_bottom = 751.0
-scale = Vector2(0.75, 0.75)
+offset_left = 287.0
+offset_top = 41.0
+offset_right = 950.0
+offset_bottom = 656.0
+scale = Vector2(0.85, 0.85)
 
-[node name="GridContainer" type="GridContainer" parent="Control/VBoxContainer"]
+[node name="Gc-1-Linha" type="GridContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 8
 
-[node name="Carta" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
+[node name="Carta" parent="Control/VBoxContainer/Gc-1-Linha" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta5" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
+[node name="Carta4" parent="Control/VBoxContainer/Gc-1-Linha" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta6" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
+[node name="Carta3" parent="Control/VBoxContainer/Gc-1-Linha" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta7" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
+[node name="Carta2" parent="Control/VBoxContainer/Gc-1-Linha" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta8" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta4" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta3" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta2" parent="Control/VBoxContainer/GridContainer" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="GridContainer6" type="GridContainer" parent="Control/VBoxContainer"]
+[node name="Gc-1-Linha2" type="GridContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 8
 
-[node name="Carta" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
+[node name="Carta" parent="Control/VBoxContainer/Gc-1-Linha2" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta5" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
+[node name="Carta4" parent="Control/VBoxContainer/Gc-1-Linha2" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta6" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
+[node name="Carta3" parent="Control/VBoxContainer/Gc-1-Linha2" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta7" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
+[node name="Carta2" parent="Control/VBoxContainer/Gc-1-Linha2" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta8" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta4" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta3" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta2" parent="Control/VBoxContainer/GridContainer6" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="GridContainer5" type="GridContainer" parent="Control/VBoxContainer"]
+[node name="Gc-2-Linha" type="GridContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 8
 
-[node name="Carta" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
+[node name="Carta" parent="Control/VBoxContainer/Gc-2-Linha" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta5" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
+[node name="Carta4" parent="Control/VBoxContainer/Gc-2-Linha" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta6" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
+[node name="Carta3" parent="Control/VBoxContainer/Gc-2-Linha" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta7" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
+[node name="Carta2" parent="Control/VBoxContainer/Gc-2-Linha" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta8" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
+[node name="Gc-3-Linha" type="GridContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta4" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta3" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta2" parent="Control/VBoxContainer/GridContainer5" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="GridContainer2" type="GridContainer" parent="Control/VBoxContainer"]
-custom_minimum_size = Vector2(150, 150)
-layout_direction = 2
-layout_mode = 2
-theme_override_constants/h_separation = 21
-theme_override_constants/v_separation = -8
+size_flags_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
 columns = 8
 
-[node name="Carta" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
+[node name="Carta" parent="Control/VBoxContainer/Gc-3-Linha" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta5" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
+[node name="Carta4" parent="Control/VBoxContainer/Gc-3-Linha" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta6" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
+[node name="Carta3" parent="Control/VBoxContainer/Gc-3-Linha" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Carta7" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta4" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta3" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta2" parent="Control/VBoxContainer/GridContainer2" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="GridContainer4" type="GridContainer" parent="Control/VBoxContainer"]
-custom_minimum_size = Vector2(150, 150)
-layout_direction = 2
-layout_mode = 2
-theme_override_constants/h_separation = 21
-theme_override_constants/v_separation = -8
-columns = 8
-
-[node name="Carta" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta5" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta6" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta7" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta4" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta3" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta2" parent="Control/VBoxContainer/GridContainer4" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="TalvezApagar" type="GridContainer" parent="Control/VBoxContainer"]
-visible = false
-custom_minimum_size = Vector2(150, 150)
-layout_direction = 2
-layout_mode = 2
-theme_override_constants/h_separation = 21
-theme_override_constants/v_separation = -8
-columns = 8
-
-[node name="Carta" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta5" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta6" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta7" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta4" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta3" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Carta2" parent="Control/VBoxContainer/TalvezApagar" instance=ExtResource("4_h7iqj")]
+[node name="Carta2" parent="Control/VBoxContainer/Gc-3-Linha" instance=ExtResource("4_h7iqj")]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 
 [node name="Cronometro" parent="Control/VBoxContainer" instance=ExtResource("5_rwo3j")]
-visible = false
-position = Vector2(-180, -18.6667)
+position = Vector2(-298.824, -51.7647)
