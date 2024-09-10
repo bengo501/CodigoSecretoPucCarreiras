@@ -117,6 +117,7 @@ texture = ExtResource("3_nm0iq")
 
 [node name="Cor_Cinza" type="ColorRect" parent="Button/Panel"]
 visible = false
+layout_mode = 0
 offset_left = 8.0
 offset_top = 9.0
 offset_right = 133.0

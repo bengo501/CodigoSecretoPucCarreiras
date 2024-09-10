@@ -69,8 +69,8 @@ text = "opções de som"
 layout_mode = 0
 offset_left = 340.0
 offset_top = 140.0
-offset_right = 778.0
-offset_bottom = 477.0
+offset_right = 769.0
+offset_bottom = 536.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_680cu")
 
 [node name="Botao_DesligarSom" type="Button" parent="Control/Painel"]

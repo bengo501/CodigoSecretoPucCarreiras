@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://78y6t5hey74f"]
+[gd_scene load_steps=29 format=3 uid="uid://78y6t5hey74f"]
 
 [ext_resource type="Script" path="res://Scripts/Control.gd" id="1_yukmi"]
 [ext_resource type="Texture2D" uid="uid://blmovs8ivlnr3" path="res://Assets/Background/Diamonds medium spaced 4.png" id="2_hlmqf"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://c6gww0c28gxbs" path="res://Scenes/CenasJogo/SelecaoTabuleirosScene.tscn" id="20_o31en"]
 [ext_resource type="PackedScene" uid="uid://tu1dn2r4n1c3" path="res://Scenes/CenasJogo/TutorialScene.tscn" id="21_7jd2k"]
 [ext_resource type="PackedScene" uid="uid://bi602nbm2qp53" path="res://Scenes/CenasJogo/CreditsScene.tscn" id="22_ck0nj"]
+[ext_resource type="FontFile" uid="uid://dnywhcguxpyql" path="res://Assets/Fonts/STYLU.TTF" id="23_a5xl8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f4b71"]
 bg_color = Color(1, 1, 1, 1)
@@ -292,19 +293,21 @@ texture = ExtResource("5_5x6xl")
 [node name="TalentosEmAçãoLogo" type="TextureRect" parent="Control"]
 modulate = Color(0.247059, 0.247059, 0.247059, 0.72549)
 layout_mode = 0
-offset_left = 650.0
-offset_top = 444.0
-offset_right = 6038.0
-offset_bottom = 2915.0
+offset_left = 631.0
+offset_top = 452.0
+offset_right = 6019.0
+offset_bottom = 2923.0
+rotation = -0.0574432
 scale = Vector2(0.09, 0.085)
 texture = ExtResource("10_xjp5w")
 
 [node name="TalentosEmAçãoLogo2" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_left = 636.0
-offset_top = 443.0
-offset_right = 6071.0
-offset_bottom = 2843.0
+offset_left = 615.0
+offset_top = 450.0
+offset_right = 6050.0
+offset_bottom = 2850.0
+rotation = -0.0574564
 scale = Vector2(0.09, 0.085)
 texture = ExtResource("10_xjp5w")
 
@@ -413,10 +416,6 @@ offset_bottom = 439.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("18_32wgi")
 
-[node name="Opcoes" parent="Control" instance=ExtResource("14_lmtw5")]
-visible = false
-position = Vector2(6, 7)
-
 [node name="Infos" type="Control" parent="Control"]
 layout_mode = 3
 anchors_preset = 0
@@ -454,6 +453,10 @@ icon = ExtResource("12_30x6k")
 layout_mode = 2
 icon = ExtResource("13_1ru0c")
 
+[node name="Opcoes" parent="Control" instance=ExtResource("14_lmtw5")]
+visible = false
+position = Vector2(0, 1)
+
 [node name="TabuleirosScene" parent="." instance=ExtResource("20_o31en")]
 visible = false
 offset_left = 10.0
@@ -474,3 +477,19 @@ offset_left = 2.0
 offset_top = 22.0
 offset_right = 2.0
 offset_bottom = 22.0
+
+[node name="2024" type="Label" parent="."]
+modulate = Color(0.933333, 0.564706, 0.2, 1)
+offset_left = 985.0
+offset_top = 584.0
+offset_right = 1136.0
+offset_bottom = 660.0
+rotation = -0.0913368
+scale = Vector2(1.14355, 0.999835)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("23_a5xl8")
+theme_override_font_sizes/font_size = 55
+text = "2024"

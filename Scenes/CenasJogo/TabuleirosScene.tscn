@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://chsvmi7mktb5k"]
 
 [ext_resource type="FontFile" uid="uid://dusayyky20wwd" path="res://Assets/Fonts/ProudlyBold-MVVwB.ttf" id="1_vyjtv"]
-[ext_resource type="Texture2D" uid="uid://dylponhu3thxs" path="res://Assets/Misc/Mapa1.png" id="2_2i5hb"]
 [ext_resource type="FontFile" uid="uid://ceurk1i16trqk" path="res://Assets/Fonts/FontypeRounded-rgJJ7.ttf" id="3_1kiws"]
 [ext_resource type="Texture2D" uid="uid://bfka7jbsujgq3" path="res://Assets/Misc/cross.png" id="3_pjl1n"]
+[ext_resource type="Texture2D" uid="uid://5njw5pg6aaal" path="res://Assets/Mapas/mapa2.png" id="4_sgx35"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2u2k"]
 bg_color = Color(1, 1, 1, 0.384314)
@@ -101,4 +101,4 @@ offset_top = 79.0
 offset_right = 929.0
 offset_bottom = 767.0
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_2i5hb")
+texture = ExtResource("4_sgx35")

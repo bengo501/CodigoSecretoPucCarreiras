@@ -94,10 +94,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -23.0
-offset_top = -5.0
-offset_right = 1098.0
-offset_bottom = 606.0
+offset_left = -22.0
+offset_top = -14.0
+offset_right = -11.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.694118, 0.556863, 0.827451, 0.631373)
@@ -511,4 +511,4 @@ scale = Vector2(0.5525, 0.5525)
 
 [node name="Opcoes" parent="Control2" instance=ExtResource("12_kojxi")]
 visible = false
-position = Vector2(-9, -18)
+position = Vector2(-8, -14)
