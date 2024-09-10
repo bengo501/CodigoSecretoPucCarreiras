@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://07igjj26p6nv"]
+[gd_scene load_steps=6 format=3 uid="uid://07igjj26p6nv"]
 
 [ext_resource type="Texture2D" uid="uid://sde0swdhtxnb" path="res://Assets/Cards/Chama no zap! Post para instagram. Arte para pedidos online. Lettering em Português do Brasil. Editável (1).png" id="1_yvl7n"]
 [ext_resource type="Texture2D" uid="uid://185i444pbnqx" path="res://Assets/Cards/CuteCards.png" id="2_1s1pd"]
 [ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="3_11v3b"]
+[ext_resource type="Texture2D" uid="uid://bvixacrs7lb01" path="res://Assets/Cards/Chama no zap! Post para instagram. Arte para pedidos online. Lettering em Português do Brasil. Editável.png" id="4_ypfvy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t0hd3"]
 atlas = ExtResource("2_1s1pd")
@@ -21,28 +22,38 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 85.0
 offset_top = 30.0
-offset_right = 188.0
-offset_bottom = 154.0
+offset_right = 227.0
+offset_bottom = 215.0
+
+[node name="CardFront2" type="TextureRect" parent="Button"]
+modulate = Color(1, 1, 0, 0.34902)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 143.0
+offset_bottom = 185.0
+texture = SubResource("AtlasTexture_t0hd3")
 
 [node name="CardFront" type="TextureRect" parent="Button"]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 1.0
-offset_right = 97.0
-offset_bottom = 137.0
+offset_right = 134.0
+offset_bottom = 178.0
 texture = SubResource("AtlasTexture_t0hd3")
 
-[node name="ColorRect" type="ColorRect" parent="Button/CardFront"]
+[node name="Fundo" type="ColorRect" parent="Button/CardFront"]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 12.0
-offset_right = 82.0
-offset_bottom = 125.0
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 113.0
+offset_bottom = 163.0
 
-[node name="Ação" type="Label" parent="Button/CardFront"]
+[node name="TipoAction_Mimica" type="Label" parent="Button/CardFront"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 11.0
@@ -51,15 +62,51 @@ offset_right = 88.0
 offset_bottom = 59.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_11v3b")
-theme_override_font_sizes/font_size = 23
+theme_override_font_sizes/font_size = 34
 text = "Mímica"
 
-[node name="CardBack" type="TextureRect" parent="Button/CardFront"]
+[node name="TipoAction_Desenho" type="Label" parent="Button/CardFront"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 35.0
+offset_right = 124.0
+offset_bottom = 76.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_11v3b")
+theme_override_font_sizes/font_size = 29
+text = "Desenho"
+
+[node name="TipoAction_Conceito" type="Label" parent="Button/CardFront"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 29.0
+offset_right = 117.0
+offset_bottom = 63.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_11v3b")
+theme_override_font_sizes/font_size = 27
+text = "Conceito"
+
+[node name="CardBackAzul" type="TextureRect" parent="Button/CardFront"]
 visible = false
 custom_minimum_size = Vector2(450, 670)
 layout_mode = 0
-offset_left = -7.0
-offset_right = 1073.0
-offset_bottom = 1400.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 1309.0
+offset_bottom = 1752.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_yvl7n")
+
+[node name="CardBackRosa" type="TextureRect" parent="Button/CardFront"]
+visible = false
+layout_mode = 0
+offset_left = -7.0
+offset_right = 1403.0
+offset_bottom = 1810.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_ypfvy")

@@ -1,0 +1,250 @@
+[gd_scene load_steps=11 format=3 uid="uid://cmxucmjbyol2i"]
+
+[ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_j2q55"]
+[ext_resource type="Texture2D" uid="uid://b3e0tf4ly21nd" path="res://Assets/Logos/logo-light.png" id="2_m8k8x"]
+[ext_resource type="Texture2D" uid="uid://b603oaq2sdl6p" path="res://Assets/Logos/Brasão_PUCRS.png" id="3_apg7e"]
+[ext_resource type="Texture2D" uid="uid://6fwdqxqt0bsj" path="res://Assets/Logos/h3m76ptm.bmp" id="4_26swt"]
+[ext_resource type="Texture2D" uid="uid://deaafp2jge644" path="res://Assets/Logos/bktvrkyk.bmp" id="5_moykk"]
+[ext_resource type="Texture2D" uid="uid://2uijiojy0eno" path="res://Assets/Logos/htlf982z.bmp" id="6_kgf1g"]
+[ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="7_footl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7f3q"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.560784, 0.560784, 0.560784, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.168627, 0.168627, 0.168627, 0.6)
+shadow_size = 15
+shadow_offset = Vector2(10, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gequ5"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.560784, 0.560784, 0.560784, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.294118, 0.294118, 0.294118, 0.6)
+shadow_size = 15
+shadow_offset = Vector2(10, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4xua"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.560784, 0.560784, 0.560784, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.301961, 0.301961, 0.301961, 0.6)
+shadow_size = 15
+shadow_offset = Vector2(10, 5)
+
+[node name="IntroScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG-Branco" type="TextureRect" parent="."]
+modulate = Color(0.815686, 0.843137, 0.921569, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = -12.0
+offset_right = -12.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("1_j2q55")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="BG-Azul" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0, 0.843137, 0.941176, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = -12.0
+offset_right = -12.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("1_j2q55")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="BG-Rosa" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0.980392, 0.501961, 0.745098, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -4.0
+offset_right = -12.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("1_j2q55")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="LogoPucrs" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 766.0
+offset_top = 1.52588e-05
+offset_right = 4059.0
+offset_bottom = 4257.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_apg7e")
+
+[node name="Intro2" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Intro2"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 33.0
+offset_right = 1048.0
+offset_bottom = 431.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7f3q")
+
+[node name="Panel2" type="Panel" parent="Intro2"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 459.0
+offset_right = 1094.0
+offset_bottom = 630.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gequ5")
+
+[node name="TextureRect2" type="TextureRect" parent="Intro2"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 37.0
+offset_right = 3288.0
+offset_bottom = 1557.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_26swt")
+
+[node name="TextureRect3" type="TextureRect" parent="Intro2"]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 483.0
+offset_right = 1669.0
+offset_bottom = 970.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_moykk")
+
+[node name="TextureRect5" type="TextureRect" parent="Intro2"]
+layout_mode = 0
+offset_left = 674.0
+offset_top = 493.0
+offset_right = 2222.0
+offset_bottom = 980.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_kgf1g")
+
+[node name="Intro1" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Intro1"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 11.0
+offset_right = 1060.0
+offset_bottom = 460.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h4xua")
+
+[node name="TextureRect" type="TextureRect" parent="Intro1"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 89.0
+offset_top = 15.0
+offset_right = 3857.0
+offset_bottom = 1774.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_m8k8x")
+
+[node name="TextureRect6" type="TextureRect" parent="Intro1"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 18.0
+offset_right = 3762.0
+offset_bottom = 1694.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_m8k8x")
+
+[node name="Label" type="Label" parent="Intro1"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 471.0
+offset_right = 576.0
+offset_bottom = 513.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("7_footl")
+theme_override_font_sizes/font_size = 50
+text = "Bernardo Klein Heitz
+"
+
+[node name="Label2" type="Label" parent="Intro1/Label"]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 65.0
+offset_right = 763.0
+offset_bottom = 107.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("7_footl")
+theme_override_font_sizes/font_size = 50
+text = "Felipe gauer"
+
+[node name="Label3" type="Label" parent="Intro1/Label"]
+layout_mode = 0
+offset_left = 557.0
+offset_top = 119.0
+offset_right = 1015.0
+offset_bottom = 161.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("7_footl")
+theme_override_font_sizes/font_size = 50
+text = "Paulo Knob
+"

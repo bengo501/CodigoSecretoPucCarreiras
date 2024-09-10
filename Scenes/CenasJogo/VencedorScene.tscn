@@ -1,0 +1,319 @@
+[gd_scene load_steps=15 format=3 uid="uid://dn6ff8c8e7p1n"]
+
+[ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_l50qs"]
+[ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="2_vyupi"]
+[ext_resource type="Texture2D" uid="uid://cctqv834kabaj" path="res://Assets/Misc/home.png" id="3_2bkm5"]
+[ext_resource type="Texture2D" uid="uid://bfka7jbsujgq3" path="res://Assets/Misc/cross.png" id="4_kaq46"]
+[ext_resource type="Texture2D" uid="uid://d1qc1kl8xjo7d" path="res://Assets/Misc/return.png" id="5_ty5to"]
+[ext_resource type="Texture2D" uid="uid://cvnubvph514dd" path="res://Assets/Misc/medal1.png" id="6_i5qsf"]
+[ext_resource type="Texture2D" uid="uid://cji8f4qqmvukx" path="res://Assets/Misc/medal2.png" id="7_mdfd0"]
+[ext_resource type="Texture2D" uid="uid://brbvkefhe8euu" path="res://Assets/Misc/trophy.png" id="8_qurtw"]
+[ext_resource type="Texture2D" uid="uid://2wmt7omr3aaw" path="res://Assets/Misc/w57wrdra.bmp" id="9_to7yw"]
+[ext_resource type="Texture2D" uid="uid://rrv1xckl8atv" path="res://Assets/Misc/9fqiumee.bmp" id="10_k08bd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1pr0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.588235, 0.588235, 0.588235, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.4, 0.4, 0.4, 0.65098)
+shadow_size = 15
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3fs4"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_color = Color(0.745098, 0.745098, 0.745098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+shadow_color = Color(0.239216, 0.239216, 0.239216, 0.439216)
+shadow_size = 8
+shadow_offset = Vector2(6, -3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikr27"]
+bg_color = Color(1, 0.556863, 0.992157, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.596078, 0.596078, 0.596078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+shadow_color = Color(0.0745098, 0.0745098, 0.0745098, 0.6)
+shadow_size = 7
+shadow_offset = Vector2(7, 7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2k2mr"]
+bg_color = Color(0.513726, 0.733333, 0.992157, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.572549, 0.572549, 0.572549, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+shadow_color = Color(0.207843, 0.207843, 0.207843, 0.584314)
+shadow_size = 8
+shadow_offset = Vector2(5, 0)
+
+[node name="VencedorScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG-Azul" type="TextureRect" parent="."]
+modulate = Color(0, 0.843137, 0.941176, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = -12.0
+offset_right = -12.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("1_l50qs")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="BG-Rosa" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0.980392, 0.501961, 0.745098, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -4.0
+offset_right = -2.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("1_l50qs")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="Panel4" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 84.0
+offset_right = 773.0
+offset_bottom = 528.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1pr0")
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 552.0
+offset_right = 991.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s3fs4")
+
+[node name="Pódio_PrimeiroLugar_Rosa" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 517.0
+offset_top = 358.0
+offset_right = 662.0
+offset_bottom = 460.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ikr27")
+
+[node name="Pódio_PrimeiroLugar_Azul" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 313.0
+offset_right = 512.0
+offset_bottom = 461.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2k2mr")
+
+[node name="Botao_Menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 577.0
+offset_right = 492.0
+offset_bottom = 636.0
+theme_override_fonts/font = ExtResource("2_vyupi")
+theme_override_font_sizes/font_size = 35
+text = "Menu inicial"
+icon = ExtResource("3_2bkm5")
+
+[node name="Botao_Sair" type="Button" parent="."]
+layout_mode = 0
+offset_left = 776.0
+offset_top = 575.0
+offset_right = 953.0
+offset_bottom = 633.0
+theme_override_fonts/font = ExtResource("2_vyupi")
+theme_override_font_sizes/font_size = 35
+text = "Sair
+"
+icon = ExtResource("4_kaq46")
+
+[node name="BotaoRecomeçar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 575.0
+offset_right = 747.0
+offset_bottom = 633.0
+theme_override_fonts/font = ExtResource("2_vyupi")
+theme_override_font_sizes/font_size = 35
+text = "Recomeçar"
+icon = ExtResource("5_ty5to")
+
+[node name="Vitória_Rosa" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 205.0
+offset_top = -22.0
+offset_right = 802.0
+offset_bottom = 105.0
+scale = Vector2(1.15, 1.15)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_vyupi")
+theme_override_font_sizes/font_size = 70
+text = "Vitória time rosa!!!"
+
+[node name="Vitória_Azul" type="Label" parent="."]
+layout_mode = 0
+offset_left = 205.0
+offset_top = -22.0
+offset_right = 802.0
+offset_bottom = 105.0
+scale = Vector2(1.15, 1.15)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_vyupi")
+theme_override_font_sizes/font_size = 70
+text = "Vitória time Azul!!!"
+
+[node name="Primeiro_Lugar" type="Label" parent="."]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 347.0
+offset_right = 546.0
+offset_bottom = 427.0
+scale = Vector2(1.15, 1.15)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_vyupi")
+theme_override_font_sizes/font_size = 35
+text = "   1º 
+Lugar"
+
+[node name="Segundo_Lugar" type="Label" parent="."]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 363.0
+offset_right = 676.0
+offset_bottom = 443.0
+scale = Vector2(1.15, 1.15)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_vyupi")
+theme_override_font_sizes/font_size = 35
+text = "   2º 
+Lugar"
+
+[node name="Medalha2Lugar" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 374.0
+offset_right = 655.0
+offset_bottom = 424.0
+texture = ExtResource("6_i5qsf")
+
+[node name="Medalha1Lugar" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 320.0
+offset_right = 511.0
+offset_bottom = 370.0
+texture = ExtResource("7_mdfd0")
+
+[node name="Troféu1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 907.0
+offset_top = 2.0
+offset_right = 977.0
+offset_bottom = 81.0
+texture = ExtResource("8_qurtw")
+
+[node name="Troféu2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 6.0
+offset_right = 201.0
+offset_bottom = 85.0
+texture = ExtResource("8_qurtw")
+
+[node name="Boneco2Lugar_Azul" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0.0431373, 0.858824, 0.964706, 1)
+self_modulate = Color(0, 0.721569, 1, 1)
+layout_mode = 0
+offset_left = 519.0
+offset_top = 222.0
+offset_right = 1119.0
+offset_bottom = 822.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_to7yw")
+
+[node name="Boneco2Lugar_Rosa" type="TextureRect" parent="."]
+modulate = Color(1, 0.313726, 0.992157, 1)
+self_modulate = Color(1, 0.74902, 0.992157, 1)
+layout_mode = 0
+offset_left = 519.0
+offset_top = 222.0
+offset_right = 1119.0
+offset_bottom = 822.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_to7yw")
+
+[node name="Boneco1Lugar_Rosa" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 0.313726, 0.992157, 1)
+self_modulate = Color(1, 0.74902, 0.992157, 1)
+layout_mode = 0
+offset_left = 329.0
+offset_top = 89.0
+offset_right = 929.0
+offset_bottom = 689.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_k08bd")
+
+[node name="Boneco1Lugar_Azul" type="TextureRect" parent="."]
+modulate = Color(0.0431373, 0.858824, 0.964706, 1)
+self_modulate = Color(0, 0.721569, 1, 1)
+layout_mode = 0
+offset_left = 329.0
+offset_top = 89.0
+offset_right = 929.0
+offset_bottom = 689.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_k08bd")

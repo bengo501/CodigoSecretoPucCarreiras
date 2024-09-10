@@ -1,0 +1,344 @@
+[gd_scene load_steps=14 format=3 uid="uid://bc8ihsyqcq3if"]
+
+[ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_a8px5"]
+[ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="2_8s4vs"]
+[ext_resource type="PackedScene" uid="uid://c5p1w1nea828w" path="res://Scenes/Cartas/CartaTestRosa.tscn" id="3_52u53"]
+[ext_resource type="PackedScene" uid="uid://dn4c5gjbukuqn" path="res://Scenes/Cartas/CartaTestAzul.tscn" id="4_ml6o6"]
+[ext_resource type="PackedScene" uid="uid://v2pn4ms7h6ev" path="res://Scenes/CenasJogo/Placar.tscn" id="5_hv4pk"]
+[ext_resource type="Texture2D" uid="uid://d1qc1kl8xjo7d" path="res://Assets/Misc/return.png" id="6_c3jd5"]
+[ext_resource type="Texture2D" uid="uid://oqf018sbel6o" path="res://Assets/Misc/power.png" id="7_r40io"]
+[ext_resource type="Texture2D" uid="uid://bpscw4k3caq1q" path="res://Assets/Misc/barsHorizontal.png" id="8_k8a3f"]
+[ext_resource type="PackedScene" uid="uid://cdui21e8qi6lj" path="res://Scenes/CenasJogo/Cronometro.tscn" id="9_7fc2g"]
+[ext_resource type="Texture2D" uid="uid://sde0swdhtxnb" path="res://Assets/Cards/Chama no zap! Post para instagram. Arte para pedidos online. Lettering em Português do Brasil. Editável (1).png" id="10_ch7hc"]
+[ext_resource type="Texture2D" uid="uid://bvixacrs7lb01" path="res://Assets/Cards/Chama no zap! Post para instagram. Arte para pedidos online. Lettering em Português do Brasil. Editável.png" id="11_vdsbg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ra2v"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.294118, 0.294118, 0.294118, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.105882, 0.105882, 0.105882, 0.6)
+shadow_size = 15
+shadow_offset = Vector2(15, 15)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_df360"]
+bg_color = Color(1, 1, 1, 1)
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.607843, 0.607843, 0.607843, 1)
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+shadow_size = 25
+shadow_offset = Vector2(10, 10)
+
+[node name="GameScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 15.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG-Azul" type="TextureRect" parent="."]
+modulate = Color(0.819608, 0.509804, 1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -4.0
+offset_right = -12.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("1_a8px5")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="BG-Rosa" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0.980392, 0.501961, 0.745098, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -4.0
+offset_right = -12.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("1_a8px5")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 330.0
+offset_top = 18.0
+offset_right = 797.0
+offset_bottom = 571.0
+
+[node name="Panel" type="Panel" parent="ColorRect"]
+layout_mode = 0
+offset_left = -74.0
+offset_top = -11.0
+offset_right = 468.0
+offset_bottom = 585.0
+scale = Vector2(1.05, 1.05)
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ra2v")
+
+[node name="TurnoRosa" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -7.0
+offset_top = 6.0
+offset_right = 151.0
+offset_bottom = 33.0
+scale = Vector2(2, 2)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8s4vs")
+theme_override_font_sizes/font_size = 30
+text = "Turno: Rosa
+"
+
+[node name="TurnoAzul" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 159.0
+offset_bottom = 31.0
+scale = Vector2(2, 2)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_8s4vs")
+theme_override_font_sizes/font_size = 30
+text = "Turno: Azul"
+
+[node name="AvisoCartaRosa" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 127.0
+offset_top = 578.0
+offset_right = 566.0
+offset_bottom = 611.0
+scale = Vector2(2, 2)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8s4vs")
+theme_override_font_sizes/font_size = 40
+text = "Escolha uma carta Rosa!"
+
+[node name="AvisoCartaAzal" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 127.0
+offset_top = 578.0
+offset_right = 566.0
+offset_bottom = 611.0
+scale = Vector2(2, 2)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_8s4vs")
+theme_override_font_sizes/font_size = 40
+text = "Escolha uma carta Azul!"
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(10, 10)
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -7.0
+offset_right = 89.0
+offset_bottom = 13.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 11.0
+offset_right = 1074.0
+offset_bottom = 872.0
+scale = Vector2(0.7, 0.7)
+
+[node name="Gc-1-Linha" type="GridContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 200
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta" parent="Control/VBoxContainer/Gc-1-Linha" instance=ExtResource("3_52u53")]
+layout_mode = 2
+
+[node name="Carta3" parent="Control/VBoxContainer/Gc-1-Linha" instance=ExtResource("3_52u53")]
+layout_mode = 2
+
+[node name="Carta2" parent="Control/VBoxContainer/Gc-1-Linha" instance=ExtResource("4_ml6o6")]
+layout_mode = 2
+
+[node name="Carta4" parent="Control/VBoxContainer/Gc-1-Linha" instance=ExtResource("3_52u53")]
+layout_mode = 2
+
+[node name="Gc-4-Linha" type="GridContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 200
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta3" parent="Control/VBoxContainer/Gc-4-Linha" instance=ExtResource("3_52u53")]
+layout_mode = 2
+
+[node name="Carta4" parent="Control/VBoxContainer/Gc-4-Linha" instance=ExtResource("3_52u53")]
+layout_mode = 2
+
+[node name="Carta" parent="Control/VBoxContainer/Gc-4-Linha" instance=ExtResource("4_ml6o6")]
+layout_mode = 2
+
+[node name="Carta2" parent="Control/VBoxContainer/Gc-4-Linha" instance=ExtResource("4_ml6o6")]
+layout_mode = 2
+
+[node name="Gc-2-Linha" type="GridContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 200
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta" parent="Control/VBoxContainer/Gc-2-Linha" instance=ExtResource("4_ml6o6")]
+layout_mode = 2
+
+[node name="Carta2" parent="Control/VBoxContainer/Gc-2-Linha" instance=ExtResource("4_ml6o6")]
+layout_mode = 2
+
+[node name="Carta3" parent="Control/VBoxContainer/Gc-2-Linha" instance=ExtResource("3_52u53")]
+layout_mode = 2
+
+[node name="Carta4" parent="Control/VBoxContainer/Gc-2-Linha" instance=ExtResource("4_ml6o6")]
+layout_mode = 2
+
+[node name="Gc-3-Linha" type="GridContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 200
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta2" parent="Control/VBoxContainer/Gc-3-Linha" instance=ExtResource("3_52u53")]
+layout_mode = 2
+
+[node name="Carta" parent="Control/VBoxContainer/Gc-3-Linha" instance=ExtResource("4_ml6o6")]
+layout_mode = 2
+
+[node name="Carta3" parent="Control/VBoxContainer/Gc-3-Linha" instance=ExtResource("3_52u53")]
+layout_mode = 2
+
+[node name="Carta4" parent="Control/VBoxContainer/Gc-3-Linha" instance=ExtResource("4_ml6o6")]
+layout_mode = 2
+
+[node name="Placar" parent="Control" instance=ExtResource("5_hv4pk")]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 685.0
+offset_top = 104.0
+offset_right = 1119.0
+offset_bottom = 612.0
+scale = Vector2(0.8, 0.8)
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -11.0
+offset_top = 155.0
+offset_right = 104.0
+offset_bottom = 483.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_df360")
+
+[node name="Restart" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 38.0
+offset_right = 82.0
+offset_bottom = 106.0
+icon = ExtResource("6_c3jd5")
+
+[node name="Exit" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 135.0
+offset_right = 82.0
+offset_bottom = 203.0
+icon = ExtResource("7_r40io")
+
+[node name="TrocaTabuleiro" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 228.0
+offset_right = 83.0
+offset_bottom = 296.0
+icon = ExtResource("8_k8a3f")
+
+[node name="Cronometro" parent="Panel" instance=ExtResource("9_7fc2g")]
+visible = false
+position = Vector2(-23, -184)
+scale = Vector2(0.65, 0.65)
+
+[node name="CardBackAzul" type="TextureRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(450, 670)
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 1309.0
+offset_bottom = 1752.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_ch7hc")
+
+[node name="CardBackRosa" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -7.0
+offset_right = 1403.0
+offset_bottom = 1810.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_vdsbg")
+
+[node name="CardBackAzul" type="TextureRect" parent="CardBackRosa"]
+visible = false
+custom_minimum_size = Vector2(450, 670)
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 1309.0
+offset_bottom = 1752.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_ch7hc")
+
+[node name="CardBackRosa" type="TextureRect" parent="CardBackRosa"]
+visible = false
+layout_mode = 0
+offset_left = -7.0
+offset_right = 1403.0
+offset_bottom = 1810.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_vdsbg")
