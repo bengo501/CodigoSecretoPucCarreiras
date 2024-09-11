@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmxucmjbyol2i"]
+[gd_scene load_steps=17 format=3 uid="uid://cmxucmjbyol2i"]
 
 [ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_j2q55"]
 [ext_resource type="Texture2D" uid="uid://b3e0tf4ly21nd" path="res://Assets/Logos/logo-light.png" id="2_m8k8x"]
+[ext_resource type="Texture2D" uid="uid://bxx80nubvle05" path="res://Assets/Background/Gingham medium A 2.png" id="2_pv7xc"]
 [ext_resource type="Texture2D" uid="uid://b603oaq2sdl6p" path="res://Assets/Logos/Brasão_PUCRS.png" id="3_apg7e"]
 [ext_resource type="Texture2D" uid="uid://6fwdqxqt0bsj" path="res://Assets/Logos/h3m76ptm.bmp" id="4_26swt"]
 [ext_resource type="Texture2D" uid="uid://deaafp2jge644" path="res://Assets/Logos/bktvrkyk.bmp" id="5_moykk"]
 [ext_resource type="Texture2D" uid="uid://2uijiojy0eno" path="res://Assets/Logos/htlf982z.bmp" id="6_kgf1g"]
-[ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="7_footl"]
+[ext_resource type="FontFile" uid="uid://ceurk1i16trqk" path="res://Assets/Fonts/FontypeRounded-rgJJ7.ttf" id="9_lcwks"]
+[ext_resource type="FontFile" uid="uid://dnywhcguxpyql" path="res://Assets/Fonts/STYLU.TTF" id="9_ly6v6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7f3q"]
 bg_color = Color(1, 1, 1, 1)
@@ -14,7 +16,7 @@ border_width_left = 6
 border_width_top = 6
 border_width_right = 6
 border_width_bottom = 6
-border_color = Color(0.560784, 0.560784, 0.560784, 1)
+border_color = Color(0.419608, 0.419608, 0.419608, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -29,7 +31,7 @@ border_width_left = 6
 border_width_top = 6
 border_width_right = 6
 border_width_bottom = 6
-border_color = Color(0.560784, 0.560784, 0.560784, 1)
+border_color = Color(0.407843, 0.407843, 0.407843, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -44,7 +46,7 @@ border_width_left = 6
 border_width_top = 6
 border_width_right = 6
 border_width_bottom = 6
-border_color = Color(0.560784, 0.560784, 0.560784, 1)
+border_color = Color(0.34902, 0.34902, 0.34902, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -52,6 +54,60 @@ corner_radius_bottom_left = 10
 shadow_color = Color(0.301961, 0.301961, 0.301961, 0.6)
 shadow_size = 15
 shadow_offset = Vector2(10, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_817kk"]
+bg_color = Color(0, 0.611765, 0.12549, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.25098, 0.25098, 0.25098, 0.6)
+shadow_size = 6
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g164t"]
+bg_color = Color(0.886275, 0.6, 0.258824, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.262745, 0.262745, 0.262745, 0.6)
+shadow_size = 6
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yyu6u"]
+bg_color = Color(0.32549, 0.615686, 0.870588, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.247059, 0.247059, 0.247059, 0.6)
+shadow_size = 6
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv4yo"]
+bg_color = Color(0.92549, 0.141176, 0.0196078, 1)
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
 
 [node name="IntroScene" type="Control"]
 layout_mode = 3
@@ -62,6 +118,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BG-Branco" type="TextureRect" parent="."]
+visible = false
 modulate = Color(0.815686, 0.843137, 0.921569, 1)
 layout_mode = 1
 anchors_preset = 15
@@ -77,6 +134,35 @@ size_flags_vertical = 3
 texture = ExtResource("1_j2q55")
 expand_mode = 2
 stretch_mode = 1
+
+[node name="Bg-Branco" type="TextureRect" parent="."]
+modulate = Color(0.815686, 0.878431, 0.972549, 1)
+self_modulate = Color(1, 1, 1, 0.866667)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pv7xc")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0.188235, 0.188235, 0.188235, 0.733333)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -7.0
+offset_right = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.533333)
 
 [node name="BG-Azul" type="TextureRect" parent="."]
 visible = false
@@ -125,6 +211,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_apg7e")
 
 [node name="Intro2" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -139,41 +226,56 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_c7f3q")
 
 [node name="Panel2" type="Panel" parent="Intro2"]
 layout_mode = 0
-offset_left = 75.0
-offset_top = 459.0
-offset_right = 1094.0
+offset_left = 84.0
+offset_top = 468.0
+offset_right = 1053.0
 offset_bottom = 630.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_gequ5")
 
 [node name="TextureRect2" type="TextureRect" parent="Intro2"]
 layout_mode = 0
-offset_left = 180.0
-offset_top = 37.0
-offset_right = 3288.0
-offset_bottom = 1557.0
+offset_left = 142.0
+offset_top = 34.0
+offset_right = 3274.0
+offset_bottom = 1526.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_26swt")
 
 [node name="TextureRect3" type="TextureRect" parent="Intro2"]
 layout_mode = 0
-offset_left = 121.0
-offset_top = 483.0
-offset_right = 1669.0
-offset_bottom = 970.0
+offset_left = 197.0
+offset_top = 498.0
+offset_right = 1509.0
+offset_bottom = 909.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_moykk")
 
 [node name="TextureRect5" type="TextureRect" parent="Intro2"]
 layout_mode = 0
-offset_left = 674.0
-offset_top = 493.0
-offset_right = 2222.0
-offset_bottom = 980.0
+offset_left = 657.0
+offset_top = 502.0
+offset_right = 1981.0
+offset_bottom = 941.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_kgf1g")
 
+[node name="2024" type="Label" parent="Intro2"]
+modulate = Color(0.933333, 0.564706, 0.2, 1)
+offset_left = 742.0
+offset_top = 317.0
+offset_right = 994.0
+offset_bottom = 433.0
+rotation = -0.0913368
+scale = Vector2(1.14355, 0.999835)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("9_ly6v6")
+theme_override_font_sizes/font_size = 95
+text = "2024"
+
 [node name="Intro1" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -205,46 +307,78 @@ offset_bottom = 1694.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_m8k8x")
 
-[node name="Label" type="Label" parent="Intro1"]
+[node name="nome_Bernardo" type="Label" parent="Intro1"]
 layout_mode = 0
-offset_left = 118.0
-offset_top = 471.0
-offset_right = 576.0
-offset_bottom = 513.0
+offset_left = 112.0
+offset_top = 462.0
+offset_right = 570.0
+offset_bottom = 520.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
 theme_override_constants/shadow_outline_size = 2
-theme_override_fonts/font = ExtResource("7_footl")
+theme_override_fonts/font = ExtResource("9_lcwks")
 theme_override_font_sizes/font_size = 50
-text = "Bernardo Klein Heitz
+text = "Bernardo Heitz
 "
 
-[node name="Label2" type="Label" parent="Intro1/Label"]
+[node name="Label2" type="Label" parent="Intro1/nome_Bernardo"]
 layout_mode = 0
-offset_left = 305.0
-offset_top = 65.0
-offset_right = 763.0
-offset_bottom = 107.0
+offset_left = 351.0
+offset_top = 56.0
+offset_right = 809.0
+offset_bottom = 114.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
 theme_override_constants/shadow_outline_size = 2
-theme_override_fonts/font = ExtResource("7_footl")
+theme_override_fonts/font = ExtResource("9_lcwks")
 theme_override_font_sizes/font_size = 50
 text = "Felipe gauer"
 
-[node name="Label3" type="Label" parent="Intro1/Label"]
+[node name="Label3" type="Label" parent="Intro1/nome_Bernardo"]
 layout_mode = 0
-offset_left = 557.0
-offset_top = 119.0
-offset_right = 1015.0
-offset_bottom = 161.0
+offset_left = 682.0
+offset_top = 95.0
+offset_right = 1140.0
+offset_bottom = 153.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
 theme_override_constants/shadow_outline_size = 2
-theme_override_fonts/font = ExtResource("7_footl")
+theme_override_fonts/font = ExtResource("9_lcwks")
 theme_override_font_sizes/font_size = 50
 text = "Paulo Knob
 "
+
+[node name="Panel2" type="Panel" parent="Intro1"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 519.0
+offset_right = 454.0
+offset_bottom = 534.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_817kk")
+
+[node name="Panel3" type="Panel" parent="Intro1"]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 581.0
+offset_right = 747.0
+offset_bottom = 596.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g164t")
+
+[node name="Panel4" type="Panel" parent="Intro1"]
+layout_mode = 0
+offset_left = 795.0
+offset_top = 616.0
+offset_right = 1044.0
+offset_bottom = 630.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yyu6u")
+
+[node name="Panel5" type="Panel" parent="Intro1"]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 581.0
+offset_right = 746.0
+offset_bottom = 596.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nv4yo")

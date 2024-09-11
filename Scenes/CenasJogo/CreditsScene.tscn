@@ -166,10 +166,10 @@ stretch_mode = 1
 
 [node name="BotaoSair" type="Button" parent="."]
 layout_mode = 0
-offset_left = 23.0
-offset_top = 562.0
-offset_right = 163.0
-offset_bottom = 620.0
+offset_left = 44.0
+offset_top = 572.0
+offset_right = 216.0
+offset_bottom = 633.0
 theme_override_fonts/font = ExtResource("3_ptb04")
 theme_override_font_sizes/font_size = 50
 text = "Voltar"

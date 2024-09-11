@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://e2pjtaep7qr"]
+[gd_scene load_steps=19 format=3 uid="uid://e2pjtaep7qr"]
 
 [ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_05443"]
 [ext_resource type="Texture2D" uid="uid://5pi6mxfibvlj" path="res://Assets/Misc/ay71lc71.bmp" id="2_0qop1"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c5p1w1nea828w" path="res://Scenes/Cartas/CartaTestRosa.tscn" id="9_r12n2"]
 [ext_resource type="PackedScene" uid="uid://bj2phb7jvirug" path="res://Scenes/Cartas/CartaTestAzul2.tscn" id="11_0708m"]
 [ext_resource type="PackedScene" uid="uid://bbexjpp7wca50" path="res://Scenes/CenasJogo/Options.tscn" id="12_kojxi"]
+[ext_resource type="PackedScene" uid="uid://dn6ff8c8e7p1n" path="res://Scenes/CenasJogo/VencedorScene.tscn" id="16_8y0qi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ra2v"]
 bg_color = Color(1, 1, 1, 1)
@@ -512,3 +513,11 @@ scale = Vector2(0.5525, 0.5525)
 [node name="Opcoes" parent="Control2" instance=ExtResource("12_kojxi")]
 visible = false
 position = Vector2(-7, -13)
+
+[node name="VencedorScene" parent="." instance=ExtResource("16_8y0qi")]
+visible = false
+layout_mode = 1
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 4.0
+offset_bottom = 2.0

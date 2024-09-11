@@ -54,9 +54,9 @@ script = ExtResource("1_eo3w7")
 [node name="OpçõesDeÁudio" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 356.0
-offset_top = 94.0
+offset_top = 85.0
 offset_right = 685.0
-offset_bottom = 135.0
+offset_bottom = 126.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
@@ -67,10 +67,10 @@ text = "opções de som"
 
 [node name="Painel" type="Panel" parent="Control"]
 layout_mode = 0
-offset_left = 340.0
+offset_left = 341.0
 offset_top = 140.0
-offset_right = 769.0
-offset_bottom = 536.0
+offset_right = 770.0
+offset_bottom = 510.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_680cu")
 
 [node name="Botao_DesligarSom" type="Button" parent="Control/Painel"]
@@ -132,34 +132,33 @@ text = "0%"
 
 [node name="Título_Opções" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 395.0
-offset_top = -24.0
-offset_right = 645.0
-offset_bottom = 97.0
+offset_left = 392.0
+offset_top = -9.0
+offset_right = 694.0
+offset_bottom = 112.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
 theme_override_constants/shadow_outline_size = 2
-theme_override_fonts/font = ExtResource("3_hqjp4")
-theme_override_font_sizes/font_size = 90
+theme_override_fonts/font = ExtResource("2_4kx52")
+theme_override_font_sizes/font_size = 75
 text = "Opções"
 
 [node name="Engrenagem2" type="TextureRect" parent="Control/Título_Opções"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 249.0
-offset_top = 26.0
+offset_top = 1.0
 offset_right = 301.0
-offset_bottom = 77.0
+offset_bottom = 52.0
 scale = Vector2(2, 2)
 texture = ExtResource("11_mjqls")
 
 [node name="Engrenagem" type="TextureRect" parent="Control/Título_Opções"]
 layout_mode = 0
 offset_left = 242.0
-offset_top = 25.0
 offset_right = 293.0
-offset_bottom = 75.0
+offset_bottom = 50.0
 scale = Vector2(2, 2)
 texture = ExtResource("11_mjqls")
 

@@ -65,12 +65,12 @@ offset_right = 2097.0
 offset_bottom = 1202.0
 
 [node name="Botao_Voltar" type="Button" parent="."]
-offset_left = 66.0
-offset_top = 1075.0
-offset_right = 305.0
-offset_bottom = 1167.0
+offset_left = 81.0
+offset_top = 1050.0
+offset_right = 342.0
+offset_bottom = 1152.0
 theme_override_fonts/font = ExtResource("1_4gwmv")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 90
 text = "Voltar"
 icon = ExtResource("2_163wn")
 
