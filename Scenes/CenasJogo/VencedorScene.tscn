@@ -167,7 +167,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_h1pr0")
 layout_mode = 0
 offset_left = -11.0
 offset_top = 560.0
-offset_right = 670.0
+offset_right = 294.0
 offset_bottom = 639.0
 scale = Vector2(0.8, 1)
 theme_override_styles/panel = SubResource("StyleBoxFlat_s3fs4")
@@ -210,37 +210,37 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_febq3")
 layout_mode = 0
 offset_left = 9.0
 offset_top = 573.0
-offset_right = 235.0
-offset_bottom = 631.0
+offset_right = 71.0
+offset_bottom = 632.0
 scale = Vector2(0.8, 1)
 theme_override_fonts/font = ExtResource("2_nj6l6")
 theme_override_font_sizes/font_size = 40
-text = "Menu inicial"
+text = "
+"
 icon = ExtResource("3_2bkm5")
 
 [node name="Botao_Sair" type="Button" parent="."]
 layout_mode = 0
-offset_left = 371.0
-offset_top = 573.0
-offset_right = 535.0
-offset_bottom = 633.0
+offset_left = 164.0
+offset_top = 572.0
+offset_right = 226.0
+offset_bottom = 632.0
 scale = Vector2(0.8, 1)
 theme_override_fonts/font = ExtResource("2_nj6l6")
 theme_override_font_sizes/font_size = 49
-text = "Sair
+text = "
 "
 icon = ExtResource("4_kaq46")
 
 [node name="BotaoRecomeçar" type="Button" parent="."]
 layout_mode = 0
-offset_left = 202.0
-offset_top = 574.0
-offset_right = 401.0
-offset_bottom = 632.0
+offset_left = 90.0
+offset_top = 571.0
+offset_right = 148.0
+offset_bottom = 629.0
 scale = Vector2(0.8, 1)
 theme_override_fonts/font = ExtResource("2_nj6l6")
 theme_override_font_sizes/font_size = 35
-text = "Recomeçar"
 icon = ExtResource("5_ty5to")
 
 [node name="Vitória_Azul" type="Label" parent="."]
