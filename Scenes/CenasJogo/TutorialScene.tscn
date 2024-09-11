@@ -29,6 +29,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Bg-Blur" type="ColorRect" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0.882353)
+self_modulate = Color(0.577008, 0.577008, 0.577008, 1)
+offset_right = 2097.0
+offset_bottom = 1202.0
+
 [node name="Bg-Branco" type="TextureRect" parent="."]
 visible = false
 modulate = Color(0.815686, 0.894118, 0.996078, 1)
@@ -46,6 +52,7 @@ expand_mode = 2
 stretch_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -97,13 +104,13 @@ texture = ExtResource("3_alegl")
 
 [node name="Botao_Voltar" type="Button" parent="."]
 layout_mode = 0
-offset_left = 41.0
-offset_top = 574.0
-offset_right = 257.0
-offset_bottom = 656.0
+offset_left = 57.0
+offset_top = 567.0
+offset_right = 296.0
+offset_bottom = 659.0
 scale = Vector2(0.7, 0.7)
 theme_override_fonts/font = ExtResource("2_m6vvg")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 80
 text = "Voltar
 "
 icon = ExtResource("4_r4dak")

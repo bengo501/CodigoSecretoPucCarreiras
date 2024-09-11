@@ -453,33 +453,9 @@ icon = ExtResource("12_30x6k")
 layout_mode = 2
 icon = ExtResource("13_1ru0c")
 
-[node name="Opcoes" parent="Control" instance=ExtResource("14_lmtw5")]
-visible = false
-position = Vector2(0, 1)
-
-[node name="TabuleirosScene" parent="." instance=ExtResource("20_o31en")]
-visible = false
-offset_left = 10.0
-offset_top = 27.0
-offset_right = 10.0
-offset_bottom = 27.0
-
-[node name="TutorialScene" parent="." instance=ExtResource("21_7jd2k")]
-visible = false
-offset_left = 37.0
-offset_top = -1.0
-offset_right = 37.0
-offset_bottom = -1.0
-
-[node name="CreditsScene" parent="." instance=ExtResource("22_ck0nj")]
-visible = false
-offset_left = 2.0
-offset_top = 22.0
-offset_right = 2.0
-offset_bottom = 22.0
-
-[node name="2024" type="Label" parent="."]
+[node name="2024" type="Label" parent="Control"]
 modulate = Color(0.933333, 0.564706, 0.2, 1)
+layout_mode = 0
 offset_left = 985.0
 offset_top = 584.0
 offset_right = 1136.0
@@ -493,3 +469,26 @@ theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("23_a5xl8")
 theme_override_font_sizes/font_size = 55
 text = "2024"
+
+[node name="Opcoes" parent="Control" instance=ExtResource("14_lmtw5")]
+visible = false
+position = Vector2(0, 1)
+
+[node name="TabuleirosScene" parent="." instance=ExtResource("20_o31en")]
+visible = false
+offset_left = -2.0
+offset_top = -2.0
+offset_right = -2.0
+offset_bottom = -2.0
+
+[node name="TutorialScene" parent="." instance=ExtResource("21_7jd2k")]
+visible = false
+offset_left = -3.0
+offset_right = -3.0
+
+[node name="CreditsScene" parent="." instance=ExtResource("22_ck0nj")]
+visible = false
+offset_left = -8.0
+offset_top = -5.0
+offset_right = -8.0
+offset_bottom = -5.0

@@ -64,9 +64,12 @@ bg_color = Color(1, 1, 1, 1)
 border_width_left = 6
 border_width_top = 6
 border_width_right = 6
+border_width_bottom = 6
 border_color = Color(0.588235, 0.588235, 0.588235, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 shadow_color = Color(0.239216, 0.239216, 0.239216, 0.6)
 shadow_size = 15
 shadow_offset = Vector2(10, 5)
@@ -93,7 +96,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Bg-Blur" type="ColorRect" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0.882353)
+self_modulate = Color(0.577008, 0.577008, 0.577008, 1)
+offset_right = 2097.0
+offset_bottom = 1202.0
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -161,7 +171,7 @@ offset_top = 562.0
 offset_right = 163.0
 offset_bottom = 620.0
 theme_override_fonts/font = ExtResource("3_ptb04")
-theme_override_font_sizes/font_size = 45
+theme_override_font_sizes/font_size = 50
 text = "Voltar"
 icon = ExtResource("3_qqfr2")
 
@@ -368,19 +378,19 @@ text = "Realização:"
 
 [node name="TextureRect7" type="TextureRect" parent="Realização"]
 layout_mode = 0
-offset_left = -283.0
-offset_top = -98.0
-offset_right = 4942.0
-offset_bottom = 2377.0
+offset_left = -291.0
+offset_top = -108.0
+offset_right = 4809.0
+offset_bottom = 2092.0
 scale = Vector2(0.04, 0.04)
 texture = ExtResource("7_n1tum")
 
 [node name="TextureRect2" type="TextureRect" parent="Realização"]
 layout_mode = 0
-offset_left = -286.0
-offset_top = 15.0
-offset_right = 4154.0
-offset_bottom = 2835.0
+offset_left = -288.0
+offset_top = 11.0
+offset_right = 4032.0
+offset_bottom = 2631.0
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("5_c2mu5")
 
@@ -391,28 +401,28 @@ offset_bottom = 40.0
 
 [node name="Panel" type="Panel" parent="Outros"]
 layout_mode = 0
-offset_left = 956.0
-offset_top = 406.0
-offset_right = 1303.0
-offset_bottom = 598.0
+offset_left = 904.0
+offset_top = 428.0
+offset_right = 1293.0
+offset_bottom = 651.0
 rotation = -1.56809
 theme_override_styles/panel = SubResource("StyleBoxFlat_iimtf")
 
 [node name="LogoPUCRS" type="TextureRect" parent="Outros"]
 layout_mode = 0
-offset_left = 999.0
-offset_top = 214.0
-offset_right = 7199.0
-offset_bottom = 7721.0
+offset_left = 951.0
+offset_top = 187.0
+offset_right = 8001.0
+offset_bottom = 8544.0
 scale = Vector2(0.02, 0.02)
 texture = ExtResource("4_4e00h")
 
 [node name="LogoPucrs" type="TextureRect" parent="Outros"]
 layout_mode = 0
-offset_left = 949.0
-offset_top = 45.0
-offset_right = 5129.0
-offset_bottom = 3865.0
+offset_left = 914.0
+offset_top = 1.00002
+offset_right = 5094.0
+offset_bottom = 3821.0
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("6_hh70o")
 

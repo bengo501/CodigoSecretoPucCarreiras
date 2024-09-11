@@ -511,4 +511,4 @@ scale = Vector2(0.5525, 0.5525)
 
 [node name="Opcoes" parent="Control2" instance=ExtResource("12_kojxi")]
 visible = false
-position = Vector2(-8, -14)
+position = Vector2(-7, -13)
