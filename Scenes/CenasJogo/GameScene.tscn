@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://e2pjtaep7qr"]
+[gd_scene load_steps=24 format=3 uid="uid://e2pjtaep7qr"]
 
 [ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_05443"]
 [ext_resource type="Texture2D" uid="uid://5pi6mxfibvlj" path="res://Assets/Misc/ay71lc71.bmp" id="2_0qop1"]
@@ -12,16 +12,15 @@
 [ext_resource type="Texture2D" uid="uid://cctqv834kabaj" path="res://Assets/Misc/home.png" id="7_hiu84"]
 [ext_resource type="Texture2D" uid="uid://oqf018sbel6o" path="res://Assets/Misc/power.png" id="7_imcyv"]
 [ext_resource type="Texture2D" uid="uid://crb6fvskd1ot1" path="res://Assets/Misc/gear.png" id="8_u814x"]
-[ext_resource type="PackedScene" uid="uid://c5p1w1nea828w" path="res://Scenes/Cartas/CartaTestRosa.tscn" id="9_r12n2"]
 [ext_resource type="Script" path="res://Scripts/BotaoSair.gd" id="10_kg8sm"]
-[ext_resource type="PackedScene" uid="uid://bj2phb7jvirug" path="res://Scenes/Cartas/CartaTestAzul2.tscn" id="11_0708m"]
 [ext_resource type="PackedScene" uid="uid://bbexjpp7wca50" path="res://Scenes/CenasJogo/Options.tscn" id="12_kojxi"]
 [ext_resource type="Script" path="res://Scripts/BotaoMenu.gd" id="12_movn0"]
 [ext_resource type="Texture2D" uid="uid://dahvtvn8gjjd1" path="res://Assets/Misc/question.png" id="12_q2fk1"]
 [ext_resource type="Script" path="res://Scripts/BotaoConfig.gd" id="14_6o83q"]
 [ext_resource type="PackedScene" uid="uid://dn6ff8c8e7p1n" path="res://Scenes/CenasJogo/VencedorScene.tscn" id="16_8y0qi"]
 [ext_resource type="Script" path="res://Scripts/BotaoComoJogar.gd" id="16_d6hg7"]
-[ext_resource type="Script" path="res://Scripts/CarregaMapa.gd" id="17_xs1ry"]
+[ext_resource type="Script" path="res://Jogo.gd" id="17_oiur6"]
+[ext_resource type="PackedScene" uid="uid://ci84i0k2cfv41" path="res://Scenes/Mapas/Mapa5-2.tscn" id="18_mddo6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ra2v"]
 bg_color = Color(1, 1, 1, 1)
@@ -87,7 +86,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -14.0
 offset_top = -14.0
-offset_right = -12.0
+offset_right = -4.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -427,106 +426,24 @@ script = ExtResource("16_d6hg7")
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 0
-offset_left = -8.0
-offset_top = 1.0
-offset_right = 82.0
-offset_bottom = 21.0
-script = ExtResource("17_xs1ry")
+offset_left = -40.0
+offset_top = -33.0
+offset_right = 50.0
+offset_bottom = -13.0
+script = ExtResource("17_oiur6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control2"]
-layout_mode = 0
-offset_left = 191.0
-offset_top = -11.0
-offset_right = 1088.0
-offset_bottom = 850.0
-scale = Vector2(0.7, 0.7)
-theme_override_constants/separation = 5
-
-[node name="Gc-1-Linha" type="GridContainer" parent="Control2/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_constants/h_separation = 215
-theme_override_constants/v_separation = 0
-columns = 8
-
-[node name="Carta" parent="Control2/VBoxContainer/Gc-1-Linha" instance=ExtResource("9_r12n2")]
-layout_mode = 2
-
-[node name="Carta3" parent="Control2/VBoxContainer/Gc-1-Linha" instance=ExtResource("9_r12n2")]
-layout_mode = 2
-
-[node name="Carta2" parent="Control2/VBoxContainer/Gc-1-Linha" instance=ExtResource("11_0708m")]
-layout_mode = 2
-
-[node name="Carta4" parent="Control2/VBoxContainer/Gc-1-Linha" instance=ExtResource("9_r12n2")]
-layout_mode = 2
-
-[node name="Gc-4-Linha" type="GridContainer" parent="Control2/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_constants/h_separation = 215
-theme_override_constants/v_separation = 0
-columns = 8
-
-[node name="Carta" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("11_0708m")]
-layout_mode = 2
-
-[node name="Carta3" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("9_r12n2")]
-layout_mode = 2
-
-[node name="Carta4" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("9_r12n2")]
-layout_mode = 2
-
-[node name="Carta2" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("11_0708m")]
-layout_mode = 2
-
-[node name="Gc-2-Linha" type="GridContainer" parent="Control2/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_constants/h_separation = 215
-theme_override_constants/v_separation = 0
-columns = 8
-
-[node name="Carta4" parent="Control2/VBoxContainer/Gc-2-Linha" instance=ExtResource("11_0708m")]
-layout_mode = 2
-
-[node name="Carta" parent="Control2/VBoxContainer/Gc-2-Linha" instance=ExtResource("11_0708m")]
-layout_mode = 2
-
-[node name="Carta3" parent="Control2/VBoxContainer/Gc-2-Linha" instance=ExtResource("9_r12n2")]
-layout_mode = 2
-
-[node name="Carta2" parent="Control2/VBoxContainer/Gc-2-Linha" instance=ExtResource("11_0708m")]
-layout_mode = 2
-
-[node name="Gc-3-Linha" type="GridContainer" parent="Control2/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_constants/h_separation = 215
-theme_override_constants/v_separation = 0
-columns = 8
-
-[node name="Carta2" parent="Control2/VBoxContainer/Gc-3-Linha" instance=ExtResource("9_r12n2")]
-layout_mode = 2
-
-[node name="Carta4" parent="Control2/VBoxContainer/Gc-3-Linha" instance=ExtResource("11_0708m")]
-layout_mode = 2
-
-[node name="Carta3" parent="Control2/VBoxContainer/Gc-3-Linha" instance=ExtResource("9_r12n2")]
-layout_mode = 2
-
-[node name="Carta" parent="Control2/VBoxContainer/Gc-3-Linha" instance=ExtResource("11_0708m")]
-layout_mode = 2
+[node name="GameScene" parent="Control2" instance=ExtResource("18_mddo6")]
+layout_mode = 1
 
 [node name="Placar" parent="Control2" instance=ExtResource("5_gwkvl")]
 layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 713.0
-offset_top = 42.0
-offset_right = 1147.0
-offset_bottom = 501.0
+offset_left = 765.0
+offset_top = 64.0
+offset_right = 1199.0
+offset_bottom = 523.0
 scale = Vector2(0.7, 0.7)
 
 [node name="Cronometro" parent="Control2" instance=ExtResource("5_rwo3j")]
