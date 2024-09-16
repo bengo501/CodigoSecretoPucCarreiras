@@ -32,6 +32,7 @@ grow_vertical = 2
 [node name="Bg-Blur" type="ColorRect" parent="."]
 modulate = Color(0.435294, 0.435294, 0.435294, 0.882353)
 self_modulate = Color(0.577008, 0.577008, 0.577008, 1)
+layout_mode = 0
 offset_right = 2097.0
 offset_bottom = 1202.0
 

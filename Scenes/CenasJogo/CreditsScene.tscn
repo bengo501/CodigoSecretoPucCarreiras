@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b603oaq2sdl6p" path="res://Assets/Logos/Brasão_PUCRS.png" id="4_4e00h"]
 [ext_resource type="FontFile" uid="uid://ceurk1i16trqk" path="res://Assets/Fonts/FontypeRounded-rgJJ7.ttf" id="5_745lu"]
 [ext_resource type="Texture2D" uid="uid://b3e0tf4ly21nd" path="res://Assets/Logos/logo-light.png" id="5_c2mu5"]
+[ext_resource type="Script" path="res://Scripts/BotaoMenu.gd" id="5_q2v7e"]
 [ext_resource type="Texture2D" uid="uid://dbywwvj1kjked" path="res://Assets/Logos/Logo-Pucrs.png" id="6_hh70o"]
-[ext_resource type="FontFile" uid="uid://b6ksaemhg1b04" path="res://Assets/FontypeRounded-rgJJ7.ttf" id="6_lsspn"]
 [ext_resource type="Texture2D" uid="uid://deaafp2jge644" path="res://Assets/Logos/bktvrkyk.bmp" id="7_n1tum"]
 [ext_resource type="Texture2D" uid="uid://6fwdqxqt0bsj" path="res://Assets/Logos/h3m76ptm.bmp" id="8_o4quk"]
 [ext_resource type="Texture2D" uid="uid://2uijiojy0eno" path="res://Assets/Logos/htlf982z.bmp" id="9_y58tl"]
@@ -99,6 +99,7 @@ grow_vertical = 2
 [node name="Bg-Blur" type="ColorRect" parent="."]
 modulate = Color(0.435294, 0.435294, 0.435294, 0.882353)
 self_modulate = Color(0.577008, 0.577008, 0.577008, 1)
+layout_mode = 0
 offset_right = 2097.0
 offset_bottom = 1202.0
 
@@ -174,6 +175,7 @@ theme_override_fonts/font = ExtResource("3_ptb04")
 theme_override_font_sizes/font_size = 50
 text = "Voltar"
 icon = ExtResource("3_qqfr2")
+script = ExtResource("5_q2v7e")
 
 [node name="Desenvolvedores" type="Control" parent="."]
 anchors_preset = 0
@@ -209,7 +211,6 @@ offset_top = 9.0
 offset_right = 248.0
 offset_bottom = 42.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_lsspn")
 theme_override_font_sizes/font_size = 40
 text = "Equipe Vhlab:"
 
@@ -471,7 +472,6 @@ offset_bottom = 334.0
 scale = Vector2(0.6, 0.6)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_lsspn")
 theme_override_font_sizes/font_size = 145
 text = "     Código 
     "
@@ -504,3 +504,5 @@ scale = Vector2(1.14355, 0.999835)
 theme_override_fonts/font = ExtResource("13_xphhr")
 theme_override_font_sizes/font_size = 55
 text = "2024"
+
+[connection signal="pressed" from="BotaoSair" to="BotaoSair" method="_on_pressed"]
