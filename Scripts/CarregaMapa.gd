@@ -5,7 +5,6 @@ extends Control
 func _ready():
 	var node = load(Global.map)
 	var cena = node.instantiate()
-	print(node)
 	add_child(cena)
 	pass
 

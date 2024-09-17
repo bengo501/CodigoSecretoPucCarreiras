@@ -7,10 +7,9 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
 
 func _on_pressed():
-	var i = int(str(get_name()))
-	Global.setMap(i)
-
-func _on__pressed():
-	pass # Replace with function body.
+	Global.changeTurn()

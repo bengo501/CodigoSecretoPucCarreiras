@@ -21,6 +21,7 @@ SceneTransition="*res://Scenes/Transicoes/scene_transition.tscn"
 Placar="*res://Scripts/Placar.gd"
 PlacarScene="*res://Scenes/CenasJogo/Placar.tscn"
 Global="*res://Scripts/Global.gd"
+GameScene="*res://Scripts/GameScene.gd"
 
 [display]
 

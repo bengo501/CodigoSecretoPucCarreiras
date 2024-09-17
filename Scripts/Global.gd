@@ -4,6 +4,7 @@ var blueScore = 0
 var map = "res://Scenes/Mapas/Mapa5-2.tscn"
 var maxNumMaps = 16
 var rng = RandomNumberGenerator.new()
+var isPinkTurn = true
    
 
 func addPink(add:int):
@@ -29,4 +30,7 @@ func setMap(i:int)->void:
 		rng.randomize()
 		i = rng.randi_range(2, 16)
 	map ="res://Scenes/Mapas/Mapa5-%d.tscn" % i
+	
+func changeTurn():
+	isPinkTurn = !isPinkTurn
 	

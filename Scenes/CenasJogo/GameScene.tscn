@@ -1,5 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://e2pjtaep7qr"]
+[gd_scene load_steps=25 format=3 uid="uid://e2pjtaep7qr"]
 
+[ext_resource type="Script" path="res://Scripts/GameScene.gd" id="1_2ube0"]
 [ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_05443"]
 [ext_resource type="Texture2D" uid="uid://5pi6mxfibvlj" path="res://Assets/Misc/ay71lc71.bmp" id="2_0qop1"]
 [ext_resource type="Texture2D" uid="uid://dlxnkd1dm5uum" path="res://Assets/Logos/brasaoAzul_000.png" id="3_bcpx1"]
@@ -13,14 +14,14 @@
 [ext_resource type="Texture2D" uid="uid://oqf018sbel6o" path="res://Assets/Misc/power.png" id="7_imcyv"]
 [ext_resource type="Texture2D" uid="uid://crb6fvskd1ot1" path="res://Assets/Misc/gear.png" id="8_u814x"]
 [ext_resource type="Script" path="res://Scripts/BotaoSair.gd" id="10_kg8sm"]
+[ext_resource type="Script" path="res://Scripts/Restart.gd" id="10_ruivn"]
 [ext_resource type="PackedScene" uid="uid://bbexjpp7wca50" path="res://Scenes/CenasJogo/Options.tscn" id="12_kojxi"]
 [ext_resource type="Script" path="res://Scripts/BotaoMenu.gd" id="12_movn0"]
 [ext_resource type="Texture2D" uid="uid://dahvtvn8gjjd1" path="res://Assets/Misc/question.png" id="12_q2fk1"]
 [ext_resource type="Script" path="res://Scripts/BotaoConfig.gd" id="14_6o83q"]
 [ext_resource type="PackedScene" uid="uid://dn6ff8c8e7p1n" path="res://Scenes/CenasJogo/VencedorScene.tscn" id="16_8y0qi"]
 [ext_resource type="Script" path="res://Scripts/BotaoComoJogar.gd" id="16_d6hg7"]
-[ext_resource type="Script" path="res://Jogo.gd" id="17_oiur6"]
-[ext_resource type="PackedScene" uid="uid://ci84i0k2cfv41" path="res://Scenes/Mapas/Mapa5-2.tscn" id="18_mddo6"]
+[ext_resource type="Script" path="res://Scripts/CarregaMapa.gd" id="17_fippr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ra2v"]
 bg_color = Color(1, 1, 1, 1)
@@ -59,6 +60,7 @@ offset_right = 15.0
 offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2ube0")
 
 [node name="BG-Azul" type="TextureRect" parent="."]
 visible = false
@@ -162,6 +164,7 @@ scale = Vector2(1.05, 1.05)
 theme_override_styles/panel = SubResource("StyleBoxFlat_0ra2v")
 
 [node name="TurnoRosa" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_top = -11.0
 offset_right = 102.0
@@ -381,6 +384,7 @@ offset_right = 78.0
 offset_bottom = 99.25
 scale = Vector2(0.8, 0.8)
 icon = ExtResource("6_7sv58")
+script = ExtResource("10_ruivn")
 
 [node name="Exit" type="Button" parent="Panel"]
 layout_mode = 0
@@ -430,10 +434,7 @@ offset_left = -40.0
 offset_top = -33.0
 offset_right = 50.0
 offset_bottom = -13.0
-script = ExtResource("17_oiur6")
-
-[node name="GameScene" parent="Control2" instance=ExtResource("18_mddo6")]
-layout_mode = 1
+script = ExtResource("17_fippr")
 
 [node name="Placar" parent="Control2" instance=ExtResource("5_gwkvl")]
 layout_mode = 2
@@ -463,6 +464,7 @@ offset_top = 2.0
 offset_right = 4.0
 offset_bottom = 2.0
 
+[connection signal="pressed" from="Panel/Restart" to="Panel/Restart" method="_on_pressed"]
 [connection signal="pressed" from="Panel/Exit" to="Panel/Exit" method="_on_pressed"]
 [connection signal="pressed" from="Panel/TrocaTabuleiro" to="Panel/TrocaTabuleiro" method="_on_pressed"]
 [connection signal="pressed" from="Panel/Opções" to="Panel/Opções" method="_on_pressed"]
