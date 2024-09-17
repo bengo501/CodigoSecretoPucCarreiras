@@ -1,0 +1,622 @@
+[gd_scene load_steps=27 format=3 uid="uid://c6gww0c28gxbs"]
+
+[ext_resource type="Texture2D" uid="uid://bxx80nubvle05" path="res://Assets/Background/Gingham medium A 2.png" id="1_rcejt"]
+[ext_resource type="Texture2D" uid="uid://cgbngxd5ev1y5" path="res://Assets/Misc/arrowLeft.png" id="2_3nxhy"]
+[ext_resource type="FontFile" uid="uid://dusayyky20wwd" path="res://Assets/Fonts/ProudlyBold-MVVwB.ttf" id="2_aikq8"]
+[ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="3_7asbu"]
+[ext_resource type="Texture2D" uid="uid://dtvl6kuvhadkg" path="res://Assets/Mapas/tabuleiro4.png" id="5_12vrx"]
+[ext_resource type="Texture2D" uid="uid://5njw5pg6aaal" path="res://Assets/Mapas/mapa2.png" id="5_n57hg"]
+[ext_resource type="Script" path="res://Scripts/BotaoMenu.gd" id="5_tintu"]
+[ext_resource type="PackedScene" uid="uid://chsvmi7mktb5k" path="res://Scenes/CenasJogo/TabuleirosScene.tscn" id="5_yvjm3"]
+[ext_resource type="Texture2D" uid="uid://dp1hhbp27cbf6" path="res://Assets/Mapas/tabuleiro3.png" id="6_afyhh"]
+[ext_resource type="Script" path="res://Scripts/BotaoSelecionaMapa.gd" id="6_kye1m"]
+[ext_resource type="Texture2D" uid="uid://dayjakmhoxj3y" path="res://Assets/Mapas/tabuleiro2.png" id="6_r02bc"]
+[ext_resource type="Texture2D" uid="uid://7gxnpswdnrk1" path="res://Assets/Mapas/tabuleiro5.png" id="7_axbpp"]
+[ext_resource type="Texture2D" uid="uid://b6lqcdki8okyn" path="res://Assets/Mapas/tabuleiro6.png" id="10_0emrs"]
+[ext_resource type="Texture2D" uid="uid://dywywtsh4m860" path="res://Assets/Mapas/tabuleiro7.png" id="11_j1ea2"]
+[ext_resource type="Texture2D" uid="uid://qku4jdl1yy75" path="res://Assets/Mapas/tabuleiro8.png" id="12_x6x0d"]
+[ext_resource type="Texture2D" uid="uid://g3cf6dg17r1a" path="res://Assets/Mapas/tabuleiro9.png" id="13_xschw"]
+[ext_resource type="Texture2D" uid="uid://cos5eosv8ddc0" path="res://Assets/Mapas/tabuleiro10.png" id="14_0caxc"]
+[ext_resource type="Texture2D" uid="uid://bde0aiaka81fn" path="res://Assets/Mapas/tabuleiro11.png" id="15_ixhwb"]
+[ext_resource type="Texture2D" uid="uid://dsjm17v1p1ue5" path="res://Assets/Mapas/tabuleiro12.png" id="16_icw3i"]
+[ext_resource type="Texture2D" uid="uid://dkxbsy0w3j2ei" path="res://Assets/Mapas/tabuleiro13.png" id="17_o0moj"]
+[ext_resource type="Texture2D" uid="uid://1mpo0kqawlmh" path="res://Assets/Mapas/tabuleiro14.png" id="18_g5qi1"]
+[ext_resource type="Texture2D" uid="uid://cwilp3sfcbiug" path="res://Assets/Mapas/tabuleiro15.png" id="19_it32e"]
+[ext_resource type="Texture2D" uid="uid://bew1np4wgftng" path="res://Assets/Mapas/tabuleiro16.png" id="20_5t87c"]
+[ext_resource type="FontFile" uid="uid://ceurk1i16trqk" path="res://Assets/Fonts/FontypeRounded-rgJJ7.ttf" id="21_umcww"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u16vm"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmu8v"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.6, 0.6, 0.6, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.235294, 0.235294, 0.235294, 0.545098)
+shadow_size = 10
+shadow_offset = Vector2(7, 7)
+
+[node name="TabuleirosScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg-Blur" type="ColorRect" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0.882353)
+self_modulate = Color(0.577008, 0.577008, 0.577008, 1)
+layout_mode = 0
+offset_right = 2097.0
+offset_bottom = 1202.0
+
+[node name="Bg-Branco" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0.815686, 0.878431, 0.972549, 1)
+self_modulate = Color(1, 1, 1, 0.866667)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rcejt")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(0.188235, 0.188235, 0.188235, 0.733333)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -7.0
+offset_right = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Título" type="Label" parent="."]
+layout_mode = 0
+offset_left = 284.0
+offset_top = -8.0
+offset_right = 729.0
+offset_bottom = 55.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 60
+text = "Selecione o tabuleiro"
+
+[node name="Título2" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 177.0
+offset_top = 551.0
+offset_right = 1124.0
+offset_bottom = 629.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_7asbu")
+theme_override_font_sizes/font_size = 95
+text = "Escolha um tabuleiro!"
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 29.0
+offset_top = 106.0
+offset_right = 1142.0
+offset_bottom = 507.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u16vm")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 584.0
+offset_right = 223.0
+offset_bottom = 655.0
+scale = Vector2(0.8, 0.8)
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 60
+text = "Voltar"
+icon = ExtResource("2_3nxhy")
+script = ExtResource("5_tintu")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 58.0
+offset_right = 1093.0
+offset_bottom = 572.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cmu8v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 73.0
+offset_right = 5530.0
+offset_bottom = 2081.0
+scale = Vector2(0.25, 0.25)
+theme_override_constants/separation = 60
+
+[node name="GC-Linha-1" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 120
+theme_override_constants/v_separation = 30
+columns = 6
+script = ExtResource("6_kye1m")
+
+[node name="1" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("5_n57hg")
+script = ExtResource("6_kye1m")
+
+[node name="2" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("5_n57hg")
+
+[node name="3" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("6_r02bc")
+
+[node name="4" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("6_afyhh")
+
+[node name="5" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("5_12vrx")
+
+[node name="6" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("7_axbpp")
+
+[node name="7" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("10_0emrs")
+
+[node name="8" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("11_j1ea2")
+
+[node name="9" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("12_x6x0d")
+
+[node name="10" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("13_xschw")
+
+[node name="11" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("14_0caxc")
+
+[node name="12" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("15_ixhwb")
+
+[node name="13" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("16_icw3i")
+
+[node name="14" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("17_o0moj")
+
+[node name="15" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("18_g5qi1")
+
+[node name="16" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("19_it32e")
+
+[node name="17" type="Button" parent="VBoxContainer/GC-Linha-1"]
+layout_mode = 2
+icon = ExtResource("20_5t87c")
+
+[node name="cinza" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 59.0
+offset_top = 73.0
+offset_right = 202.0
+offset_bottom = 232.0
+color = Color(0.803922, 0.803922, 0.803922, 0.941176)
+
+[node name="cinza2" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 234.0
+offset_top = 77.0
+offset_right = 377.0
+offset_bottom = 231.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza3" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 410.0
+offset_top = 74.0
+offset_right = 553.0
+offset_bottom = 228.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza4" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 584.0
+offset_top = 73.0
+offset_right = 727.0
+offset_bottom = 227.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza5" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 754.0
+offset_top = 75.0
+offset_right = 897.0
+offset_bottom = 229.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza6" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 926.0
+offset_top = 72.0
+offset_right = 1069.0
+offset_bottom = 226.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza7" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 58.0
+offset_top = 240.0
+offset_right = 201.0
+offset_bottom = 394.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza8" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 228.0
+offset_top = 239.0
+offset_right = 371.0
+offset_bottom = 393.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza9" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 407.0
+offset_top = 245.0
+offset_right = 549.0
+offset_bottom = 394.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza10" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 579.0
+offset_top = 241.0
+offset_right = 721.0
+offset_bottom = 392.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza11" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 752.0
+offset_top = 243.0
+offset_right = 894.0
+offset_bottom = 394.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza12" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 931.0
+offset_top = 241.0
+offset_right = 1073.0
+offset_bottom = 392.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza13" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 54.0
+offset_top = 407.0
+offset_right = 196.0
+offset_bottom = 558.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza14" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 230.0
+offset_top = 409.0
+offset_right = 372.0
+offset_bottom = 560.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza15" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 405.0
+offset_top = 407.0
+offset_right = 547.0
+offset_bottom = 558.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza16" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 585.0
+offset_top = 410.0
+offset_right = 727.0
+offset_bottom = 561.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="cinza17" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 755.0
+offset_top = 404.0
+offset_right = 897.0
+offset_bottom = 555.0
+color = Color(0.352941, 0.352941, 0.352941, 0.521569)
+
+[node name="1" type="Label" parent="."]
+layout_mode = 2
+offset_left = 280.0
+offset_top = 64.0
+offset_right = 360.0
+offset_bottom = 236.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "1"
+
+[node name="2" type="Label" parent="."]
+layout_mode = 2
+offset_left = 446.0
+offset_top = 68.0
+offset_right = 524.0
+offset_bottom = 225.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "2"
+
+[node name="3" type="Label" parent="."]
+layout_mode = 2
+offset_left = 620.0
+offset_top = 74.0
+offset_right = 700.0
+offset_bottom = 231.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "3"
+
+[node name="4" type="Label" parent="."]
+layout_mode = 2
+offset_left = 778.0
+offset_top = 38.0
+offset_right = 864.0
+offset_bottom = 238.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "4"
+
+[node name="5" type="Label" parent="."]
+layout_mode = 2
+offset_left = 959.0
+offset_top = 37.0
+offset_right = 1045.0
+offset_bottom = 237.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "5"
+
+[node name="6" type="Label" parent="."]
+layout_mode = 2
+offset_left = 82.0
+offset_top = 204.0
+offset_right = 168.0
+offset_bottom = 404.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "6"
+
+[node name="7" type="Label" parent="."]
+layout_mode = 2
+offset_left = 261.0
+offset_top = 207.0
+offset_right = 347.0
+offset_bottom = 407.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "7"
+
+[node name="8" type="Label" parent="."]
+layout_mode = 2
+offset_left = 434.0
+offset_top = 205.0
+offset_right = 520.0
+offset_bottom = 405.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "8"
+
+[node name="9" type="Label" parent="."]
+layout_mode = 2
+offset_left = 610.0
+offset_top = 206.0
+offset_right = 696.0
+offset_bottom = 406.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "9"
+
+[node name="10" type="Label" parent="."]
+layout_mode = 2
+offset_left = 772.0
+offset_top = 233.0
+offset_right = 903.0
+offset_bottom = 390.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "10"
+
+[node name="11" type="Label" parent="."]
+layout_mode = 2
+offset_left = 968.0
+offset_top = 229.0
+offset_right = 1105.0
+offset_bottom = 386.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "11"
+
+[node name="12" type="Label" parent="."]
+layout_mode = 2
+offset_left = 76.0
+offset_top = 399.0
+offset_right = 207.0
+offset_bottom = 556.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "12"
+
+[node name="13" type="Label" parent="."]
+layout_mode = 2
+offset_left = 248.0
+offset_top = 402.0
+offset_right = 379.0
+offset_bottom = 559.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "13"
+
+[node name="14" type="Label" parent="."]
+layout_mode = 2
+offset_left = 420.0
+offset_top = 366.0
+offset_right = 551.0
+offset_bottom = 566.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "14"
+
+[node name="15" type="Label" parent="."]
+layout_mode = 2
+offset_left = 596.0
+offset_top = 371.0
+offset_right = 727.0
+offset_bottom = 571.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "15"
+
+[node name="16" type="Label" parent="."]
+layout_mode = 2
+offset_left = 772.0
+offset_top = 374.0
+offset_right = 903.0
+offset_bottom = 574.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_aikq8")
+theme_override_font_sizes/font_size = 150
+text = "16"
+
+[node name="?" type="Label" parent="."]
+layout_mode = 2
+offset_left = 100.0
+offset_top = 61.0
+offset_right = 203.0
+offset_bottom = 233.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("21_umcww")
+theme_override_font_sizes/font_size = 150
+text = "?"
+
+[node name="TabuleirosScene" parent="." instance=ExtResource("5_yvjm3")]
+visible = false
+layout_mode = 1
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.00006
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/1" to="VBoxContainer/GC-Linha-1" method="_on__pressed"]

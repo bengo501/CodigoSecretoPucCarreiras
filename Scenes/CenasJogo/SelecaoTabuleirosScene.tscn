@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c6gww0c28gxbs"]
+[gd_scene load_steps=27 format=3 uid="uid://c6gww0c28gxbs"]
 
 [ext_resource type="Texture2D" uid="uid://bxx80nubvle05" path="res://Assets/Background/Gingham medium A 2.png" id="1_rcejt"]
 [ext_resource type="Texture2D" uid="uid://cgbngxd5ev1y5" path="res://Assets/Misc/arrowLeft.png" id="2_3nxhy"]
@@ -6,8 +6,10 @@
 [ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="3_7asbu"]
 [ext_resource type="Texture2D" uid="uid://dtvl6kuvhadkg" path="res://Assets/Mapas/tabuleiro4.png" id="5_12vrx"]
 [ext_resource type="Texture2D" uid="uid://5njw5pg6aaal" path="res://Assets/Mapas/mapa2.png" id="5_n57hg"]
+[ext_resource type="Script" path="res://Scripts/BotaoMenu.gd" id="5_tintu"]
 [ext_resource type="PackedScene" uid="uid://chsvmi7mktb5k" path="res://Scenes/CenasJogo/TabuleirosScene.tscn" id="5_yvjm3"]
 [ext_resource type="Texture2D" uid="uid://dp1hhbp27cbf6" path="res://Assets/Mapas/tabuleiro3.png" id="6_afyhh"]
+[ext_resource type="Script" path="res://Scripts/BotaoSelecionaMapa.gd" id="6_kye1m"]
 [ext_resource type="Texture2D" uid="uid://dayjakmhoxj3y" path="res://Assets/Mapas/tabuleiro2.png" id="6_r02bc"]
 [ext_resource type="Texture2D" uid="uid://7gxnpswdnrk1" path="res://Assets/Mapas/tabuleiro5.png" id="7_axbpp"]
 [ext_resource type="Texture2D" uid="uid://b6lqcdki8okyn" path="res://Assets/Mapas/tabuleiro6.png" id="10_0emrs"]
@@ -139,6 +141,7 @@ theme_override_fonts/font = ExtResource("2_aikq8")
 theme_override_font_sizes/font_size = 60
 text = "Voltar"
 icon = ExtResource("2_3nxhy")
+script = ExtResource("5_tintu")
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
@@ -163,73 +166,90 @@ theme_override_constants/h_separation = 120
 theme_override_constants/v_separation = 30
 columns = 6
 
-[node name="random" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="1" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("5_n57hg")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_1" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="2" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("5_n57hg")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_2" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="3" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("6_r02bc")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_3" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="4" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("6_afyhh")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_4" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="5" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("5_12vrx")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_5" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="6" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("7_axbpp")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_6" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="7" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("10_0emrs")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_7" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="8" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("11_j1ea2")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_8" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="9" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("12_x6x0d")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_9" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="10" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("13_xschw")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_10" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="11" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("14_0caxc")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_11" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="12" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("15_ixhwb")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_12" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="13" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("16_icw3i")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_13" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="14" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("17_o0moj")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_14" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="15" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("18_g5qi1")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_15" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="16" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("19_it32e")
+script = ExtResource("6_kye1m")
 
-[node name="tabuleiro_16" type="Button" parent="VBoxContainer/GC-Linha-1"]
+[node name="17" type="Button" parent="VBoxContainer/GC-Linha-1"]
 layout_mode = 2
 icon = ExtResource("20_5t87c")
+script = ExtResource("6_kye1m")
 
 [node name="cinza" type="ColorRect" parent="."]
 layout_mode = 2
@@ -237,6 +257,7 @@ offset_left = 59.0
 offset_top = 73.0
 offset_right = 202.0
 offset_bottom = 232.0
+mouse_filter = 2
 color = Color(0.803922, 0.803922, 0.803922, 0.941176)
 
 [node name="cinza2" type="ColorRect" parent="."]
@@ -245,6 +266,7 @@ offset_left = 234.0
 offset_top = 77.0
 offset_right = 377.0
 offset_bottom = 231.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza3" type="ColorRect" parent="."]
@@ -253,6 +275,7 @@ offset_left = 410.0
 offset_top = 74.0
 offset_right = 553.0
 offset_bottom = 228.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza4" type="ColorRect" parent="."]
@@ -261,6 +284,7 @@ offset_left = 584.0
 offset_top = 73.0
 offset_right = 727.0
 offset_bottom = 227.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza5" type="ColorRect" parent="."]
@@ -269,6 +293,7 @@ offset_left = 754.0
 offset_top = 75.0
 offset_right = 897.0
 offset_bottom = 229.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza6" type="ColorRect" parent="."]
@@ -277,6 +302,7 @@ offset_left = 926.0
 offset_top = 72.0
 offset_right = 1069.0
 offset_bottom = 226.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza7" type="ColorRect" parent="."]
@@ -285,6 +311,7 @@ offset_left = 58.0
 offset_top = 240.0
 offset_right = 201.0
 offset_bottom = 394.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza8" type="ColorRect" parent="."]
@@ -293,6 +320,7 @@ offset_left = 228.0
 offset_top = 239.0
 offset_right = 371.0
 offset_bottom = 393.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza9" type="ColorRect" parent="."]
@@ -301,6 +329,7 @@ offset_left = 407.0
 offset_top = 245.0
 offset_right = 549.0
 offset_bottom = 394.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza10" type="ColorRect" parent="."]
@@ -309,6 +338,7 @@ offset_left = 579.0
 offset_top = 241.0
 offset_right = 721.0
 offset_bottom = 392.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza11" type="ColorRect" parent="."]
@@ -317,6 +347,7 @@ offset_left = 752.0
 offset_top = 243.0
 offset_right = 894.0
 offset_bottom = 394.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza12" type="ColorRect" parent="."]
@@ -325,6 +356,7 @@ offset_left = 931.0
 offset_top = 241.0
 offset_right = 1073.0
 offset_bottom = 392.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza13" type="ColorRect" parent="."]
@@ -333,6 +365,7 @@ offset_left = 54.0
 offset_top = 407.0
 offset_right = 196.0
 offset_bottom = 558.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza14" type="ColorRect" parent="."]
@@ -341,6 +374,7 @@ offset_left = 230.0
 offset_top = 409.0
 offset_right = 372.0
 offset_bottom = 560.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza15" type="ColorRect" parent="."]
@@ -349,6 +383,7 @@ offset_left = 405.0
 offset_top = 407.0
 offset_right = 547.0
 offset_bottom = 558.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza16" type="ColorRect" parent="."]
@@ -357,6 +392,7 @@ offset_left = 585.0
 offset_top = 410.0
 offset_right = 727.0
 offset_bottom = 561.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="cinza17" type="ColorRect" parent="."]
@@ -365,6 +401,7 @@ offset_left = 755.0
 offset_top = 404.0
 offset_right = 897.0
 offset_bottom = 555.0
+mouse_filter = 2
 color = Color(0.352941, 0.352941, 0.352941, 0.521569)
 
 [node name="1" type="Label" parent="."]
@@ -511,7 +548,7 @@ text = "10"
 layout_mode = 2
 offset_left = 968.0
 offset_top = 229.0
-offset_right = 1105.0
+offset_right = 1052.0
 offset_bottom = 386.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 3
@@ -612,3 +649,22 @@ offset_left = 1.0
 offset_top = -1.0
 offset_right = 1.0
 offset_bottom = -1.00006
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/1" to="VBoxContainer/GC-Linha-1/1" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/2" to="VBoxContainer/GC-Linha-1/2" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/3" to="VBoxContainer/GC-Linha-1/3" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/4" to="VBoxContainer/GC-Linha-1/4" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/5" to="Button" method="_on__pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/6" to="VBoxContainer/GC-Linha-1/6" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/7" to="VBoxContainer/GC-Linha-1/7" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/8" to="VBoxContainer/GC-Linha-1/8" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/9" to="VBoxContainer/GC-Linha-1/9" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/10" to="VBoxContainer/GC-Linha-1/10" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/11" to="VBoxContainer/GC-Linha-1/11" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/12" to="VBoxContainer/GC-Linha-1/12" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/13" to="VBoxContainer/GC-Linha-1/13" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/14" to="VBoxContainer/GC-Linha-1/14" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/15" to="VBoxContainer/GC-Linha-1/15" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/16" to="VBoxContainer/GC-Linha-1/16" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/GC-Linha-1/17" to="VBoxContainer/GC-Linha-1/17" method="_on_pressed"]

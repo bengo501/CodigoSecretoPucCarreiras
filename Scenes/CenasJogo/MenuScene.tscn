@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://78y6t5hey74f"]
+[gd_scene load_steps=35 format=3 uid="uid://78y6t5hey74f"]
 
 [ext_resource type="Script" path="res://Scripts/Control.gd" id="1_yukmi"]
 [ext_resource type="Texture2D" uid="uid://blmovs8ivlnr3" path="res://Assets/Background/Diamonds medium spaced 4.png" id="2_hlmqf"]
@@ -9,8 +9,11 @@
 [ext_resource type="FontFile" uid="uid://dusayyky20wwd" path="res://Assets/Fonts/ProudlyBold-MVVwB.ttf" id="5_5pg6y"]
 [ext_resource type="Texture2D" uid="uid://b603oaq2sdl6p" path="res://Assets/Logos/Brasão_PUCRS.png" id="5_5x6xl"]
 [ext_resource type="Texture2D" uid="uid://bpscw4k3caq1q" path="res://Assets/Misc/barsHorizontal.png" id="5_eg43q"]
+[ext_resource type="Script" path="res://Scripts/BotaoComecar.gd" id="6_gf0n8"]
 [ext_resource type="Texture2D" uid="uid://oqf018sbel6o" path="res://Assets/Misc/power.png" id="6_gx1t1"]
+[ext_resource type="Script" path="res://Scripts/BotaoTabuleiros.gd" id="7_cljk7"]
 [ext_resource type="Animation" uid="uid://df7a17j0ir7xw" path="res://Assets/Animations/fade_out.res" id="7_stuad"]
+[ext_resource type="Script" path="res://Scripts/BotaoSair.gd" id="10_1p0cp"]
 [ext_resource type="Texture2D" uid="uid://6fwdqxqt0bsj" path="res://Assets/Logos/h3m76ptm.bmp" id="10_xjp5w"]
 [ext_resource type="Texture2D" uid="uid://deaafp2jge644" path="res://Assets/Logos/bktvrkyk.bmp" id="11_07pap"]
 [ext_resource type="Texture2D" uid="uid://crb6fvskd1ot1" path="res://Assets/Misc/gear.png" id="11_awl2s"]
@@ -19,10 +22,13 @@
 [ext_resource type="PackedScene" uid="uid://bbexjpp7wca50" path="res://Scenes/CenasJogo/Options.tscn" id="14_lmtw5"]
 [ext_resource type="Texture2D" uid="uid://b3n2otv8mnnml" path="res://Assets/Logos/brasaoRosa_000.png" id="17_3myv0"]
 [ext_resource type="Texture2D" uid="uid://dlxnkd1dm5uum" path="res://Assets/Logos/brasaoAzul_000.png" id="18_32wgi"]
+[ext_resource type="Script" path="res://Scripts/BotaoConfig.gd" id="20_82j85"]
 [ext_resource type="PackedScene" uid="uid://c6gww0c28gxbs" path="res://Scenes/CenasJogo/SelecaoTabuleirosScene.tscn" id="20_o31en"]
 [ext_resource type="PackedScene" uid="uid://tu1dn2r4n1c3" path="res://Scenes/CenasJogo/TutorialScene.tscn" id="21_7jd2k"]
 [ext_resource type="PackedScene" uid="uid://bi602nbm2qp53" path="res://Scenes/CenasJogo/CreditsScene.tscn" id="22_ck0nj"]
+[ext_resource type="Script" path="res://Scripts/BotaoInfo.gd" id="22_q6uem"]
 [ext_resource type="FontFile" uid="uid://dnywhcguxpyql" path="res://Assets/Fonts/STYLU.TTF" id="23_a5xl8"]
+[ext_resource type="Script" path="res://Scripts/BotaoComoJogar.gd" id="24_lmcmd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f4b71"]
 bg_color = Color(1, 1, 1, 1)
@@ -205,6 +211,7 @@ theme_override_fonts/font = ExtResource("5_5pg6y")
 theme_override_font_sizes/font_size = 60
 text = "Começar"
 icon = ExtResource("4_qhdxi")
+script = ExtResource("6_gf0n8")
 
 [node name="BotaoTabuleiros" type="Button" parent="Control/Painel_Main"]
 layout_mode = 0
@@ -216,6 +223,7 @@ theme_override_fonts/font = ExtResource("5_5pg6y")
 theme_override_font_sizes/font_size = 62
 text = "Tabuleiros"
 icon = ExtResource("5_eg43q")
+script = ExtResource("7_cljk7")
 
 [node name="BotaoSair" type="Button" parent="Control/Painel_Main"]
 layout_mode = 0
@@ -228,6 +236,7 @@ theme_override_fonts/font = ExtResource("5_5pg6y")
 theme_override_font_sizes/font_size = 55
 text = "Sair"
 icon = ExtResource("6_gx1t1")
+script = ExtResource("10_1p0cp")
 
 [node name="LogoPucSombra" type="TextureRect" parent="Control"]
 visible = false
@@ -444,14 +453,17 @@ theme_override_constants/separation = 8
 [node name="Button" type="Button" parent="Control/Infos/HBox_Infos"]
 layout_mode = 2
 icon = ExtResource("11_awl2s")
+script = ExtResource("20_82j85")
 
 [node name="Button2" type="Button" parent="Control/Infos/HBox_Infos"]
 layout_mode = 2
 icon = ExtResource("12_30x6k")
+script = ExtResource("22_q6uem")
 
 [node name="Button3" type="Button" parent="Control/Infos/HBox_Infos"]
 layout_mode = 2
 icon = ExtResource("13_1ru0c")
+script = ExtResource("24_lmcmd")
 
 [node name="2024" type="Label" parent="Control"]
 modulate = Color(0.933333, 0.564706, 0.2, 1)
@@ -492,3 +504,10 @@ offset_left = -8.0
 offset_top = -5.0
 offset_right = -8.0
 offset_bottom = -5.0
+
+[connection signal="pressed" from="Control/Painel_Main/BotaoComecar" to="Control/Painel_Main/BotaoComecar" method="_on_pressed"]
+[connection signal="pressed" from="Control/Painel_Main/BotaoTabuleiros" to="Control/Painel_Main/BotaoTabuleiros" method="_on_pressed"]
+[connection signal="pressed" from="Control/Painel_Main/BotaoSair" to="Control/Painel_Main/BotaoSair" method="_on_pressed"]
+[connection signal="pressed" from="Control/Infos/HBox_Infos/Button" to="Control/Infos/HBox_Infos/Button" method="_on_pressed"]
+[connection signal="pressed" from="Control/Infos/HBox_Infos/Button2" to="Control/Infos/HBox_Infos/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Control/Infos/HBox_Infos/Button3" to="Control/Infos/HBox_Infos/Button3" method="_on_pressed"]

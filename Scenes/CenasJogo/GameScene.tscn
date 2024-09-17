@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=23 format=3 uid="uid://e2pjtaep7qr"]
+=======
+[gd_scene load_steps=24 format=3 uid="uid://e2pjtaep7qr"]
+>>>>>>> e55fed112bebbaed68907b9b6fa894d2f839640b
 
 [ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_05443"]
 [ext_resource type="Texture2D" uid="uid://5pi6mxfibvlj" path="res://Assets/Misc/ay71lc71.bmp" id="2_0qop1"]
@@ -12,14 +16,22 @@
 [ext_resource type="Texture2D" uid="uid://cctqv834kabaj" path="res://Assets/Misc/home.png" id="7_hiu84"]
 [ext_resource type="Texture2D" uid="uid://oqf018sbel6o" path="res://Assets/Misc/power.png" id="7_imcyv"]
 [ext_resource type="Texture2D" uid="uid://crb6fvskd1ot1" path="res://Assets/Misc/gear.png" id="8_u814x"]
-[ext_resource type="PackedScene" uid="uid://c5p1w1nea828w" path="res://Scenes/Cartas/CartaTestRosa.tscn" id="9_r12n2"]
-[ext_resource type="PackedScene" uid="uid://bj2phb7jvirug" path="res://Scenes/Cartas/CartaTestAzul2.tscn" id="11_0708m"]
+[ext_resource type="Script" path="res://Scripts/BotaoSair.gd" id="10_kg8sm"]
 [ext_resource type="PackedScene" uid="uid://bbexjpp7wca50" path="res://Scenes/CenasJogo/Options.tscn" id="12_kojxi"]
+[ext_resource type="Script" path="res://Scripts/BotaoMenu.gd" id="12_movn0"]
 [ext_resource type="Texture2D" uid="uid://dahvtvn8gjjd1" path="res://Assets/Misc/question.png" id="12_q2fk1"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://b04ylwjo3hhcx" path="res://Scenes/Cartas/CartaTESTE.tscn" id="15_ovmbk"]
 [ext_resource type="PackedScene" uid="uid://dn6ff8c8e7p1n" path="res://Scenes/CenasJogo/VencedorScene.tscn" id="16_8y0qi"]
 [ext_resource type="PackedScene" uid="uid://b7n7mjp2f3nr0" path="res://Scenes/Cartas/CartaTESTE2.tscn" id="16_oxmqb"]
 [ext_resource type="PackedScene" uid="uid://tu1dn2r4n1c3" path="res://Scenes/CenasJogo/TutorialScene.tscn" id="18_j3dcm"]
+=======
+[ext_resource type="Script" path="res://Scripts/BotaoConfig.gd" id="14_6o83q"]
+[ext_resource type="PackedScene" uid="uid://dn6ff8c8e7p1n" path="res://Scenes/CenasJogo/VencedorScene.tscn" id="16_8y0qi"]
+[ext_resource type="Script" path="res://Scripts/BotaoComoJogar.gd" id="16_d6hg7"]
+[ext_resource type="Script" path="res://Jogo.gd" id="17_oiur6"]
+[ext_resource type="PackedScene" uid="uid://ci84i0k2cfv41" path="res://Scenes/Mapas/Mapa5-2.tscn" id="18_mddo6"]
+>>>>>>> e55fed112bebbaed68907b9b6fa894d2f839640b
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ra2v"]
 bg_color = Color(1, 1, 1, 1)
@@ -85,7 +97,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -14.0
 offset_top = -14.0
-offset_right = -12.0
+offset_right = -4.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -389,6 +401,7 @@ offset_right = 78.0
 offset_bottom = 178.0
 scale = Vector2(0.8, 0.8)
 icon = ExtResource("7_imcyv")
+script = ExtResource("10_kg8sm")
 
 [node name="TrocaTabuleiro" type="Button" parent="Panel"]
 layout_mode = 0
@@ -398,6 +411,7 @@ offset_right = 78.0
 offset_bottom = 249.25
 scale = Vector2(0.8, 0.8)
 icon = ExtResource("7_hiu84")
+script = ExtResource("12_movn0")
 
 [node name="Opções" type="Button" parent="Panel"]
 layout_mode = 0
@@ -407,6 +421,7 @@ offset_right = 76.75
 offset_bottom = 319.25
 scale = Vector2(0.8, 0.8)
 icon = ExtResource("8_u814x")
+script = ExtResource("14_6o83q")
 
 [node name="Info" type="Button" parent="Panel"]
 layout_mode = 0
@@ -416,16 +431,19 @@ offset_right = 78.0
 offset_bottom = 391.75
 scale = Vector2(0.8, 0.8)
 icon = ExtResource("12_q2fk1")
+script = ExtResource("16_d6hg7")
 
 [node name="Control2" type="Control" parent="."]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 0
-offset_left = -8.0
-offset_top = 1.0
-offset_right = 82.0
-offset_bottom = 21.0
+offset_left = -40.0
+offset_top = -33.0
+offset_right = 50.0
+offset_bottom = -13.0
+script = ExtResource("17_oiur6")
 
+<<<<<<< HEAD
 [node name="VBoxContainer" type="VBoxContainer" parent="Control2"]
 layout_mode = 0
 offset_left = 191.0
@@ -510,16 +528,20 @@ layout_mode = 2
 
 [node name="Carta" parent="Control2/VBoxContainer/Gc-3-Linha" instance=ExtResource("16_oxmqb")]
 layout_mode = 2
+=======
+[node name="GameScene" parent="Control2" instance=ExtResource("18_mddo6")]
+layout_mode = 1
+>>>>>>> e55fed112bebbaed68907b9b6fa894d2f839640b
 
 [node name="Placar" parent="Control2" instance=ExtResource("5_gwkvl")]
 layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 713.0
-offset_top = 42.0
-offset_right = 1147.0
-offset_bottom = 501.0
+offset_left = 765.0
+offset_top = 64.0
+offset_right = 1199.0
+offset_bottom = 523.0
 scale = Vector2(0.7, 0.7)
 
 [node name="Cronometro" parent="Control2" instance=ExtResource("5_rwo3j")]
@@ -538,6 +560,7 @@ offset_top = 2.0
 offset_right = 4.0
 offset_bottom = 2.0
 
+<<<<<<< HEAD
 [node name="TutorialScene" parent="." instance=ExtResource("18_j3dcm")]
 visible = false
 layout_mode = 1
@@ -545,3 +568,9 @@ offset_left = -21.0
 offset_top = -17.0
 offset_right = -21.0
 offset_bottom = -17.0
+=======
+[connection signal="pressed" from="Panel/Exit" to="Panel/Exit" method="_on_pressed"]
+[connection signal="pressed" from="Panel/TrocaTabuleiro" to="Panel/TrocaTabuleiro" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Opções" to="Panel/Opções" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Info" to="Panel/Info" method="_on_pressed"]
+>>>>>>> e55fed112bebbaed68907b9b6fa894d2f839640b

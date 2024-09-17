@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://v2pn4ms7h6ev"]
+[gd_scene load_steps=12 format=3 uid="uid://v2pn4ms7h6ev"]
 
+[ext_resource type="Script" path="res://Scripts/Placar.gd" id="1_cgdl7"]
 [ext_resource type="FontFile" uid="uid://dusayyky20wwd" path="res://Assets/Fonts/ProudlyBold-MVVwB.ttf" id="1_co3cl"]
 [ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="1_svu24"]
 [ext_resource type="Texture2D" uid="uid://d0361kgiuf156" path="res://Assets/Misc/plus.png" id="2_rvxco"]
@@ -45,6 +46,7 @@ offset_right = -630.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cgdl7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -116,10 +118,17 @@ text = "Time Rosa"
 
 [node name="Pontuação_Rosa" type="Label" parent="ColorRect/Time_Rosa"]
 layout_mode = 0
+<<<<<<< HEAD
 offset_left = 60.0
 offset_top = 39.0
 offset_right = 190.0
 offset_bottom = 92.0
+=======
+offset_left = 49.0
+offset_top = 40.0
+offset_right = 110.0
+offset_bottom = 93.0
+>>>>>>> e55fed112bebbaed68907b9b6fa894d2f839640b
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
@@ -143,6 +152,7 @@ theme_override_font_sizes/font_size = 30
 text = "
 "
 icon = ExtResource("2_rvxco")
+script = ExtResource("1_cgdl7")
 
 [node name="Diminuir_Rosa" type="Button" parent="ColorRect/Time_Rosa"]
 modulate = Color(1, 1, 1, 0.517647)
@@ -159,6 +169,7 @@ theme_override_font_sizes/font_size = 30
 text = "
 "
 icon = ExtResource("3_k1xp7")
+script = ExtResource("1_cgdl7")
 
 [node name="Vencendo_Rosa" type="TextureRect" parent="ColorRect/Time_Rosa"]
 layout_mode = 0
@@ -226,7 +237,7 @@ text = "Time Azul
 layout_mode = 0
 offset_left = 45.0
 offset_top = 42.0
-offset_right = 175.0
+offset_right = 100.0
 offset_bottom = 95.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 3
@@ -252,6 +263,7 @@ theme_override_font_sizes/font_size = 30
 text = "
 "
 icon = ExtResource("2_rvxco")
+script = ExtResource("1_cgdl7")
 
 [node name="Diminuir_Azul" type="Button" parent="ColorRect/Time_Azul"]
 modulate = Color(1, 1, 1, 0.517647)
@@ -267,6 +279,7 @@ theme_override_font_sizes/font_size = 30
 text = "
 "
 icon = ExtResource("3_k1xp7")
+script = ExtResource("1_cgdl7")
 
 [node name="Vencendo_Azul" type="TextureRect" parent="ColorRect/Time_Azul"]
 visible = false
@@ -314,3 +327,15 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("1_co3cl")
 theme_override_font_sizes/font_size = 20
 text = "2º Lugar"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 100.0
+offset_right = 305.0
+offset_bottom = 123.0
+
+[connection signal="pressed" from="ColorRect/Time_Rosa/Somar_Rosa" to="ColorRect/Time_Rosa/Somar_Rosa" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/Time_Rosa/Diminuir_Rosa" to="ColorRect/Time_Rosa/Diminuir_Rosa" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/Time_Azul/Somar_Azul" to="ColorRect/Time_Azul/Somar_Azul" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/Time_Azul/Diminuir_Azul" to="ColorRect/Time_Azul/Diminuir_Azul" method="_on_pressed"]

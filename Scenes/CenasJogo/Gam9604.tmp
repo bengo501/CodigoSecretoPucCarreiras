@@ -1,0 +1,553 @@
+[gd_scene load_steps=25 format=3 uid="uid://e2pjtaep7qr"]
+
+[ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_05443"]
+[ext_resource type="Texture2D" uid="uid://5pi6mxfibvlj" path="res://Assets/Misc/ay71lc71.bmp" id="2_0qop1"]
+[ext_resource type="Texture2D" uid="uid://dlxnkd1dm5uum" path="res://Assets/Logos/brasaoAzul_000.png" id="3_bcpx1"]
+[ext_resource type="FontFile" uid="uid://dusayyky20wwd" path="res://Assets/Fonts/ProudlyBold-MVVwB.ttf" id="3_wr5xp"]
+[ext_resource type="PackedScene" uid="uid://07igjj26p6nv" path="res://Scenes/Cartas/Carta.tscn" id="4_h7iqj"]
+[ext_resource type="PackedScene" uid="uid://v2pn4ms7h6ev" path="res://Scenes/CenasJogo/Placar.tscn" id="5_gwkvl"]
+[ext_resource type="PackedScene" uid="uid://cdui21e8qi6lj" path="res://Scenes/CenasJogo/Cronometro.tscn" id="5_rwo3j"]
+[ext_resource type="Texture2D" uid="uid://d1qc1kl8xjo7d" path="res://Assets/Misc/return.png" id="6_7sv58"]
+[ext_resource type="Texture2D" uid="uid://b3n2otv8mnnml" path="res://Assets/Logos/brasaoRosa_000.png" id="7_cpqpj"]
+[ext_resource type="Texture2D" uid="uid://cctqv834kabaj" path="res://Assets/Misc/home.png" id="7_hiu84"]
+[ext_resource type="Texture2D" uid="uid://oqf018sbel6o" path="res://Assets/Misc/power.png" id="7_imcyv"]
+[ext_resource type="Texture2D" uid="uid://crb6fvskd1ot1" path="res://Assets/Misc/gear.png" id="8_u814x"]
+[ext_resource type="PackedScene" uid="uid://c5p1w1nea828w" path="res://Scenes/Cartas/CartaTestRosa.tscn" id="9_r12n2"]
+[ext_resource type="Script" path="res://Scripts/BotaoSair.gd" id="10_kg8sm"]
+[ext_resource type="PackedScene" uid="uid://bj2phb7jvirug" path="res://Scenes/Cartas/CartaTestAzul2.tscn" id="11_0708m"]
+[ext_resource type="PackedScene" uid="uid://bbexjpp7wca50" path="res://Scenes/CenasJogo/Options.tscn" id="12_kojxi"]
+[ext_resource type="Script" path="res://Scripts/BotaoMenu.gd" id="12_movn0"]
+[ext_resource type="Texture2D" uid="uid://dahvtvn8gjjd1" path="res://Assets/Misc/question.png" id="12_q2fk1"]
+[ext_resource type="Script" path="res://Scripts/BotaoConfig.gd" id="14_6o83q"]
+[ext_resource type="PackedScene" uid="uid://dn6ff8c8e7p1n" path="res://Scenes/CenasJogo/VencedorScene.tscn" id="16_8y0qi"]
+[ext_resource type="Script" path="res://Scripts/BotaoComoJogar.gd" id="16_d6hg7"]
+[ext_resource type="Script" path="res://Scripts/CarregaMapa.gd" id="17_xs1ry"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ra2v"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.294118, 0.294118, 0.294118, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.266667, 0.266667, 0.266667, 0.65098)
+shadow_size = 10
+shadow_offset = Vector2(10, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_df360"]
+bg_color = Color(1, 1, 1, 1)
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.607843, 0.607843, 0.607843, 1)
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+shadow_size = 25
+shadow_offset = Vector2(10, 10)
+
+[node name="GameScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 15.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG-Azul" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0, 0.843137, 0.941176, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = -12.0
+offset_right = -12.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("1_05443")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="BG-Rosa" type="TextureRect" parent="."]
+modulate = Color(0.980392, 0.501961, 0.745098, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = -14.0
+offset_right = -12.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("1_05443")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -14.0
+offset_right = -11.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.694118, 0.556863, 0.827451, 0.631373)
+
+[node name="VhLabito_Azul" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0.0235294, 0, 1, 1)
+self_modulate = Color(0, 1, 1, 1)
+layout_mode = 0
+offset_left = -68.0
+offset_top = 287.0
+offset_right = 390.0
+offset_bottom = 895.0
+rotation = -0.547408
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_0qop1")
+
+[node name="BrasaoAzul" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.698039)
+layout_mode = 0
+offset_left = -53.0
+offset_top = 212.0
+offset_right = 176.0
+offset_bottom = 507.0
+rotation = 0.263987
+scale = Vector2(1.43788, 1.34403)
+texture = ExtResource("3_bcpx1")
+
+[node name="BrasaoRosa" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.698039)
+layout_mode = 0
+offset_left = -69.0
+offset_top = 236.0
+offset_right = 220.0
+offset_bottom = 581.0
+rotation = 0.215644
+scale = Vector2(1.13816, 1.05108)
+texture = ExtResource("7_cpqpj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 330.0
+offset_top = 18.0
+offset_right = 797.0
+offset_bottom = 571.0
+
+[node name="Panel" type="Panel" parent="ColorRect"]
+layout_mode = 0
+offset_left = -121.0
+offset_top = -24.0
+offset_right = 450.0
+offset_bottom = 578.0
+scale = Vector2(1.05, 1.05)
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ra2v")
+
+[node name="TurnoRosa" type="Label" parent="."]
+layout_mode = 0
+offset_top = -11.0
+offset_right = 102.0
+offset_bottom = 78.0
+scale = Vector2(2, 2)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_wr5xp")
+theme_override_font_sizes/font_size = 40
+text = "Turno: 
+Rosa
+"
+
+[node name="TurnoAzul" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = -18.0
+offset_right = 157.0
+offset_bottom = 71.0
+scale = Vector2(2, 2)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_wr5xp")
+theme_override_font_sizes/font_size = 40
+text = "Turno:
+ Azul"
+
+[node name="AvisoCartaRosa" type="Label" parent="."]
+layout_mode = 0
+offset_left = 842.0
+offset_top = 471.0
+offset_right = 976.0
+offset_bottom = 538.0
+scale = Vector2(2, 2)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("3_wr5xp")
+theme_override_font_sizes/font_size = 30
+text = "Escolha uma 
+carta Rosa!"
+
+[node name="AvisoCartaAzal" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 843.0
+offset_top = 473.0
+offset_right = 1282.0
+offset_bottom = 540.0
+scale = Vector2(2, 2)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_wr5xp")
+theme_override_font_sizes/font_size = 30
+text = "Escolha uma 
+carta Azul!"
+
+[node name="Control" type="Control" parent="."]
+visible = false
+custom_minimum_size = Vector2(10, 10)
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -7.0
+offset_right = 89.0
+offset_bottom = 13.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 252.0
+offset_top = 23.0
+offset_right = 1052.0
+offset_bottom = 800.0
+scale = Vector2(0.7, 0.7)
+
+[node name="Gc-1-Linha" type="GridContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta" parent="Control/VBoxContainer/Gc-1-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta4" parent="Control/VBoxContainer/Gc-1-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta3" parent="Control/VBoxContainer/Gc-1-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta2" parent="Control/VBoxContainer/Gc-1-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Gc-4-Linha" type="GridContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta" parent="Control/VBoxContainer/Gc-4-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta4" parent="Control/VBoxContainer/Gc-4-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta3" parent="Control/VBoxContainer/Gc-4-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta2" parent="Control/VBoxContainer/Gc-4-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Gc-2-Linha" type="GridContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta" parent="Control/VBoxContainer/Gc-2-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta4" parent="Control/VBoxContainer/Gc-2-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta3" parent="Control/VBoxContainer/Gc-2-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta2" parent="Control/VBoxContainer/Gc-2-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Gc-3-Linha" type="GridContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta" parent="Control/VBoxContainer/Gc-3-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta4" parent="Control/VBoxContainer/Gc-3-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta3" parent="Control/VBoxContainer/Gc-3-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Carta2" parent="Control/VBoxContainer/Gc-3-Linha" instance=ExtResource("4_h7iqj")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Placar" parent="Control" instance=ExtResource("5_gwkvl")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 702.0
+offset_top = 99.0
+offset_right = 1136.0
+offset_bottom = 588.0
+scale = Vector2(0.75, 0.75)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 187.0
+offset_right = 79.0
+offset_bottom = 601.0
+scale = Vector2(0.8, 0.8)
+theme_override_styles/panel = SubResource("StyleBoxFlat_df360")
+
+[node name="Restart" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 31.25
+offset_right = 78.0
+offset_bottom = 99.25
+scale = Vector2(0.8, 0.8)
+icon = ExtResource("6_7sv58")
+
+[node name="Exit" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 110.0
+offset_right = 78.0
+offset_bottom = 178.0
+scale = Vector2(0.8, 0.8)
+icon = ExtResource("7_imcyv")
+script = ExtResource("10_kg8sm")
+
+[node name="TrocaTabuleiro" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 181.25
+offset_right = 78.0
+offset_bottom = 249.25
+scale = Vector2(0.8, 0.8)
+icon = ExtResource("7_hiu84")
+script = ExtResource("12_movn0")
+
+[node name="Opções" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8.75
+offset_top = 251.25
+offset_right = 76.75
+offset_bottom = 319.25
+scale = Vector2(0.8, 0.8)
+icon = ExtResource("8_u814x")
+script = ExtResource("14_6o83q")
+
+[node name="Info" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 323.75
+offset_right = 78.0
+offset_bottom = 391.75
+scale = Vector2(0.8, 0.8)
+icon = ExtResource("12_q2fk1")
+script = ExtResource("16_d6hg7")
+
+[node name="Control2" type="Control" parent="."]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -8.0
+offset_top = 1.0
+offset_right = 82.0
+offset_bottom = 21.0
+script = ExtResource("17_xs1ry")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2"]
+visible = false
+layout_mode = 0
+offset_left = 191.0
+offset_top = -11.0
+offset_right = 1088.0
+offset_bottom = 850.0
+scale = Vector2(0.7, 0.7)
+theme_override_constants/separation = 5
+
+[node name="Gc-1-Linha" type="GridContainer" parent="Control2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 215
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta" parent="Control2/VBoxContainer/Gc-1-Linha" instance=ExtResource("9_r12n2")]
+layout_mode = 2
+
+[node name="Carta3" parent="Control2/VBoxContainer/Gc-1-Linha" instance=ExtResource("9_r12n2")]
+layout_mode = 2
+
+[node name="Carta2" parent="Control2/VBoxContainer/Gc-1-Linha" instance=ExtResource("11_0708m")]
+layout_mode = 2
+
+[node name="Carta4" parent="Control2/VBoxContainer/Gc-1-Linha" instance=ExtResource("9_r12n2")]
+layout_mode = 2
+
+[node name="Gc-4-Linha" type="GridContainer" parent="Control2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 215
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("11_0708m")]
+layout_mode = 2
+
+[node name="Carta3" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("9_r12n2")]
+layout_mode = 2
+
+[node name="Carta4" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("9_r12n2")]
+layout_mode = 2
+
+[node name="Carta2" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("11_0708m")]
+layout_mode = 2
+
+[node name="Gc-2-Linha" type="GridContainer" parent="Control2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 215
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta4" parent="Control2/VBoxContainer/Gc-2-Linha" instance=ExtResource("11_0708m")]
+layout_mode = 2
+
+[node name="Carta" parent="Control2/VBoxContainer/Gc-2-Linha" instance=ExtResource("11_0708m")]
+layout_mode = 2
+
+[node name="Carta3" parent="Control2/VBoxContainer/Gc-2-Linha" instance=ExtResource("9_r12n2")]
+layout_mode = 2
+
+[node name="Carta2" parent="Control2/VBoxContainer/Gc-2-Linha" instance=ExtResource("11_0708m")]
+layout_mode = 2
+
+[node name="Gc-3-Linha" type="GridContainer" parent="Control2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 215
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Carta2" parent="Control2/VBoxContainer/Gc-3-Linha" instance=ExtResource("9_r12n2")]
+layout_mode = 2
+
+[node name="Carta4" parent="Control2/VBoxContainer/Gc-3-Linha" instance=ExtResource("11_0708m")]
+layout_mode = 2
+
+[node name="Carta3" parent="Control2/VBoxContainer/Gc-3-Linha" instance=ExtResource("9_r12n2")]
+layout_mode = 2
+
+[node name="Carta" parent="Control2/VBoxContainer/Gc-3-Linha" instance=ExtResource("11_0708m")]
+layout_mode = 2
+
+[node name="Placar" parent="Control2" instance=ExtResource("5_gwkvl")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 713.0
+offset_top = 42.0
+offset_right = 1147.0
+offset_bottom = 501.0
+scale = Vector2(0.7, 0.7)
+
+[node name="Cronometro" parent="Control2" instance=ExtResource("5_rwo3j")]
+visible = false
+position = Vector2(-8, -24)
+scale = Vector2(0.5525, 0.5525)
+
+[node name="Opcoes" parent="Control2" instance=ExtResource("12_kojxi")]
+visible = false
+position = Vector2(-7, -13)
+
+[node name="VencedorScene" parent="." instance=ExtResource("16_8y0qi")]
+visible = false
+layout_mode = 1
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 4.0
+offset_bottom = 2.0
+
+[connection signal="pressed" from="Panel/Exit" to="Panel/Exit" method="_on_pressed"]
+[connection signal="pressed" from="Panel/TrocaTabuleiro" to="Panel/TrocaTabuleiro" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Opções" to="Panel/Opções" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Info" to="Panel/Info" method="_on_pressed"]

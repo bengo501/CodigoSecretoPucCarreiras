@@ -15,6 +15,13 @@ run/main_scene="res://Scenes/CenasJogo/MenuScene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Assets/Misc/icon.svg"
 
+[autoload]
+
+SceneTransition="*res://Scenes/Transicoes/scene_transition.tscn"
+Placar="*res://Scripts/Placar.gd"
+PlacarScene="*res://Scenes/CenasJogo/Placar.tscn"
+Global="*res://Scripts/Global.gd"
+
 [display]
 
 mouse_cursor/custom_image="res://Assets/Cursor/hand_point.png"
