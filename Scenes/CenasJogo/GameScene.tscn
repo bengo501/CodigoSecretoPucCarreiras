@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://e2pjtaep7qr"]
+[gd_scene load_steps=23 format=3 uid="uid://e2pjtaep7qr"]
 
 [ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_05443"]
 [ext_resource type="Texture2D" uid="uid://5pi6mxfibvlj" path="res://Assets/Misc/ay71lc71.bmp" id="2_0qop1"]
@@ -16,7 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://bj2phb7jvirug" path="res://Scenes/Cartas/CartaTestAzul2.tscn" id="11_0708m"]
 [ext_resource type="PackedScene" uid="uid://bbexjpp7wca50" path="res://Scenes/CenasJogo/Options.tscn" id="12_kojxi"]
 [ext_resource type="Texture2D" uid="uid://dahvtvn8gjjd1" path="res://Assets/Misc/question.png" id="12_q2fk1"]
+[ext_resource type="PackedScene" uid="uid://b04ylwjo3hhcx" path="res://Scenes/Cartas/CartaTESTE.tscn" id="15_ovmbk"]
 [ext_resource type="PackedScene" uid="uid://dn6ff8c8e7p1n" path="res://Scenes/CenasJogo/VencedorScene.tscn" id="16_8y0qi"]
+[ext_resource type="PackedScene" uid="uid://b7n7mjp2f3nr0" path="res://Scenes/Cartas/CartaTESTE2.tscn" id="16_oxmqb"]
+[ext_resource type="PackedScene" uid="uid://tu1dn2r4n1c3" path="res://Scenes/CenasJogo/TutorialScene.tscn" id="18_j3dcm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ra2v"]
 bg_color = Color(1, 1, 1, 1)
@@ -448,7 +451,7 @@ layout_mode = 2
 [node name="Carta2" parent="Control2/VBoxContainer/Gc-1-Linha" instance=ExtResource("11_0708m")]
 layout_mode = 2
 
-[node name="Carta4" parent="Control2/VBoxContainer/Gc-1-Linha" instance=ExtResource("9_r12n2")]
+[node name="Carta4" parent="Control2/VBoxContainer/Gc-1-Linha" instance=ExtResource("15_ovmbk")]
 layout_mode = 2
 
 [node name="Gc-4-Linha" type="GridContainer" parent="Control2/VBoxContainer"]
@@ -461,10 +464,10 @@ columns = 8
 [node name="Carta" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("11_0708m")]
 layout_mode = 2
 
-[node name="Carta3" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("9_r12n2")]
+[node name="Carta3" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("15_ovmbk")]
 layout_mode = 2
 
-[node name="Carta4" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("9_r12n2")]
+[node name="Carta4" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("15_ovmbk")]
 layout_mode = 2
 
 [node name="Carta2" parent="Control2/VBoxContainer/Gc-4-Linha" instance=ExtResource("11_0708m")]
@@ -486,7 +489,7 @@ layout_mode = 2
 [node name="Carta3" parent="Control2/VBoxContainer/Gc-2-Linha" instance=ExtResource("9_r12n2")]
 layout_mode = 2
 
-[node name="Carta2" parent="Control2/VBoxContainer/Gc-2-Linha" instance=ExtResource("11_0708m")]
+[node name="Carta2" parent="Control2/VBoxContainer/Gc-2-Linha" instance=ExtResource("16_oxmqb")]
 layout_mode = 2
 
 [node name="Gc-3-Linha" type="GridContainer" parent="Control2/VBoxContainer"]
@@ -505,7 +508,7 @@ layout_mode = 2
 [node name="Carta3" parent="Control2/VBoxContainer/Gc-3-Linha" instance=ExtResource("9_r12n2")]
 layout_mode = 2
 
-[node name="Carta" parent="Control2/VBoxContainer/Gc-3-Linha" instance=ExtResource("11_0708m")]
+[node name="Carta" parent="Control2/VBoxContainer/Gc-3-Linha" instance=ExtResource("16_oxmqb")]
 layout_mode = 2
 
 [node name="Placar" parent="Control2" instance=ExtResource("5_gwkvl")]
@@ -529,9 +532,16 @@ visible = false
 position = Vector2(-7, -13)
 
 [node name="VencedorScene" parent="." instance=ExtResource("16_8y0qi")]
-visible = false
 layout_mode = 1
 offset_left = 4.0
 offset_top = 2.0
 offset_right = 4.0
 offset_bottom = 2.0
+
+[node name="TutorialScene" parent="." instance=ExtResource("18_j3dcm")]
+visible = false
+layout_mode = 1
+offset_left = -21.0
+offset_top = -17.0
+offset_right = -21.0
+offset_bottom = -17.0

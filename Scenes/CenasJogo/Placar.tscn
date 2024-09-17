@@ -116,17 +116,17 @@ text = "Time Rosa"
 
 [node name="Pontuação_Rosa" type="Label" parent="ColorRect/Time_Rosa"]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 40.0
-offset_right = 179.0
-offset_bottom = 93.0
+offset_left = 60.0
+offset_top = 39.0
+offset_right = 190.0
+offset_bottom = 92.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("1_co3cl")
 theme_override_font_sizes/font_size = 50
-text = "00"
+text = "3"
 
 [node name="Somar_Rosa" type="Button" parent="ColorRect/Time_Rosa"]
 modulate = Color(1, 1, 1, 0.517647)
@@ -161,30 +161,30 @@ text = "
 icon = ExtResource("3_k1xp7")
 
 [node name="Vencendo_Rosa" type="TextureRect" parent="ColorRect/Time_Rosa"]
-visible = false
 layout_mode = 0
-offset_left = 33.0
-offset_top = 134.0
-offset_right = 83.0
-offset_bottom = 184.0
+offset_left = 22.0
+offset_top = 158.0
+offset_right = 72.0
+offset_bottom = 208.0
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("4_3ttn3")
 
 [node name="Texto_Vitoria_Rosa" type="Label" parent="ColorRect/Time_Rosa/Vencendo_Rosa"]
 layout_mode = 0
-offset_left = -8.0
-offset_top = 38.4
-offset_right = 58.0
-offset_bottom = 63.4
+offset_left = -7.2
+offset_top = 43.2
+offset_right = 58.8
+offset_bottom = 71.2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("1_svu24")
-theme_override_font_sizes/font_size = 18
+theme_override_fonts/font = ExtResource("1_co3cl")
+theme_override_font_sizes/font_size = 20
 text = "1º Lugar"
 
 [node name="Perdendo_Rosa" type="TextureRect" parent="ColorRect/Time_Rosa"]
+visible = false
 layout_mode = 0
 offset_left = 12.0
 offset_top = 147.0
@@ -234,7 +234,7 @@ theme_override_constants/shadow_offset_y = 3
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("1_co3cl")
 theme_override_font_sizes/font_size = 50
-text = "00
+text = "2
 "
 
 [node name="Somar_Azul" type="Button" parent="ColorRect/Time_Azul"]
@@ -269,6 +269,7 @@ text = "
 icon = ExtResource("3_k1xp7")
 
 [node name="Vencendo_Azul" type="TextureRect" parent="ColorRect/Time_Azul"]
+visible = false
 layout_mode = 0
 offset_left = -5.0
 offset_top = 152.0
@@ -292,25 +293,24 @@ theme_override_font_sizes/font_size = 20
 text = "1º Lugar"
 
 [node name="Perdendo_Azul" type="TextureRect" parent="ColorRect/Time_Azul"]
-visible = false
 layout_mode = 0
-offset_left = 31.0
-offset_top = 139.0
-offset_right = 81.0
-offset_bottom = 189.0
+offset_left = 12.0
+offset_top = 160.0
+offset_right = 62.0
+offset_bottom = 210.0
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("5_os6ty")
 
 [node name="Texto_Derrota_Azul" type="Label" parent="ColorRect/Time_Azul/Perdendo_Azul"]
 layout_mode = 0
-offset_left = -12.8
-offset_top = 36.8
-offset_right = 55.2
-offset_bottom = 61.8
+offset_left = -8.4
+offset_top = 45.2
+offset_right = 59.6
+offset_bottom = 73.2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("1_svu24")
-theme_override_font_sizes/font_size = 18
+theme_override_fonts/font = ExtResource("1_co3cl")
+theme_override_font_sizes/font_size = 20
 text = "2º Lugar"

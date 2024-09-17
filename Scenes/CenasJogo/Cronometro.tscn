@@ -168,6 +168,7 @@ theme_override_font_sizes/font_size = 105
 text = "Cronômetro:"
 
 [node name="Equipe Rosa" type="Label" parent="Painel_Main"]
+visible = false
 layout_mode = 0
 offset_left = 48.0
 offset_top = 100.0
@@ -183,7 +184,6 @@ text = "  Rodada:
 Time Rosa"
 
 [node name="Equipe Azul" type="Label" parent="Painel_Main"]
-visible = false
 layout_mode = 0
 offset_left = 42.0
 offset_top = 101.0
