@@ -392,6 +392,7 @@ texture = ExtResource("10_k08bd")
 [node name="BrasaoRosa" type="TextureRect" parent="."]
 visible = false
 self_modulate = Color(1, 1, 1, 0.698039)
+layout_mode = 0
 offset_left = 27.0
 offset_top = 188.0
 offset_right = 313.0
@@ -402,6 +403,7 @@ texture = ExtResource("12_yf3g6")
 [node name="BrasaoRosa2" type="TextureRect" parent="."]
 visible = false
 self_modulate = Color(1, 1, 1, 0.698039)
+layout_mode = 0
 offset_left = 845.0
 offset_top = 179.0
 offset_right = 1131.0
@@ -411,6 +413,7 @@ texture = ExtResource("12_yf3g6")
 
 [node name="BrasaoAzul" type="TextureRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.698039)
+layout_mode = 0
 offset_left = 22.0
 offset_top = 184.0
 offset_right = 313.0
@@ -420,6 +423,7 @@ texture = ExtResource("13_7umn2")
 
 [node name="BrasaoAzul2" type="TextureRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.698039)
+layout_mode = 0
 offset_left = 846.0
 offset_top = 180.0
 offset_right = 1137.0
@@ -451,6 +455,7 @@ texture = ExtResource("14_diw4e")
 
 [node name="TalentosEmAçãoLogo" type="TextureRect" parent="."]
 modulate = Color(0.247059, 0.247059, 0.247059, 0.72549)
+layout_mode = 0
 offset_left = 742.0
 offset_top = 480.944
 offset_right = 5036.0
@@ -460,6 +465,7 @@ scale = Vector2(0.09, 0.085)
 texture = ExtResource("15_wb6ws")
 
 [node name="TalentosEmAçãoLogo2" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 694.0
 offset_top = 473.944
 offset_right = 5327.0
@@ -470,6 +476,7 @@ texture = ExtResource("15_wb6ws")
 
 [node name="2024" type="Label" parent="."]
 modulate = Color(0.933333, 0.564706, 0.2, 1)
+layout_mode = 0
 offset_left = 991.0
 offset_top = 590.0
 offset_right = 1135.0

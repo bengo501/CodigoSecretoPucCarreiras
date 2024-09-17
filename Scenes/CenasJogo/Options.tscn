@@ -39,7 +39,7 @@ _data = {
 [node name="Options" type="Node2D"]
 
 [node name="Bg-Blur" type="ColorRect" parent="."]
-modulate = Color(0.403922, 0.403922, 0.403922, 0.941176)
+modulate = Color(0.458824, 0.458824, 0.458824, 0.72549)
 self_modulate = Color(0.577008, 0.577008, 0.577008, 1)
 offset_right = 1144.0
 offset_bottom = 645.0

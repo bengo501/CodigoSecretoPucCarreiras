@@ -260,6 +260,7 @@ texture = ExtResource("6_kgf1g")
 
 [node name="2024" type="Label" parent="Intro2"]
 modulate = Color(0.933333, 0.564706, 0.2, 1)
+layout_mode = 0
 offset_left = 742.0
 offset_top = 317.0
 offset_right = 994.0

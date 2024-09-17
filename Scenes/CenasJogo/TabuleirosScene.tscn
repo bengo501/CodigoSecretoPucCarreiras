@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://chsvmi7mktb5k"]
+[gd_scene load_steps=7 format=3 uid="uid://chsvmi7mktb5k"]
 
 [ext_resource type="FontFile" uid="uid://dusayyky20wwd" path="res://Assets/Fonts/ProudlyBold-MVVwB.ttf" id="1_vyjtv"]
 [ext_resource type="FontFile" uid="uid://ceurk1i16trqk" path="res://Assets/Fonts/FontypeRounded-rgJJ7.ttf" id="3_1kiws"]
@@ -19,6 +19,21 @@ corner_radius_bottom_left = 20
 shadow_color = Color(0.105882, 0.105882, 0.105882, 0.6)
 shadow_size = 30
 shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bswf"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.505882, 0.505882, 0.505882, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.282353, 0.282353, 0.282353, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(10, 5)
 
 [node name="TabuleirosScene" type="Control"]
 layout_mode = 3
@@ -94,11 +109,20 @@ theme_override_font_sizes/font_size = 70
 text = "1
 "
 
+[node name="Panel" type="Panel" parent="Panel2"]
+visible = false
+layout_mode = 0
+offset_left = 48.0
+offset_top = 82.0
+offset_right = 511.0
+offset_bottom = 425.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3bswf")
+
 [node name="Mapa1" type="TextureRect" parent="Panel2"]
 layout_mode = 0
 offset_left = 68.0
-offset_top = 79.0
-offset_right = 929.0
-offset_bottom = 767.0
+offset_top = 77.0
+offset_right = 938.0
+offset_bottom = 769.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_sgx35")
