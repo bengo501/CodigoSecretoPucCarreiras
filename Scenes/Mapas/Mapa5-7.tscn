@@ -1,18 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1dgiht0f1t1d"]
+[gd_scene load_steps=3 format=3 uid="uid://b1dgiht0f1t1d"]
 
-[ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_bi3o0"]
 [ext_resource type="PackedScene" uid="uid://bj2phb7jvirug" path="res://Scenes/Cartas/CartaTestAzul2.tscn" id="2_3su6h"]
 [ext_resource type="PackedScene" uid="uid://c5p1w1nea828w" path="res://Scenes/Cartas/CartaTestRosa.tscn" id="3_s7ksf"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ra2v"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.415686, 0.415686, 0.415686, 1)
-shadow_color = Color(0.203922, 0.203922, 0.203922, 0.6)
-shadow_offset = Vector2(15, 15)
 
 [node name="GameScene" type="Control"]
 layout_mode = 3
@@ -25,59 +14,6 @@ offset_right = 15.0
 offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="BG-Azul" type="TextureRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = -4.0
-offset_right = -12.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-texture = ExtResource("1_bi3o0")
-expand_mode = 2
-stretch_mode = 1
-
-[node name="BG-Rosa" type="TextureRect" parent="."]
-visible = false
-modulate = Color(0.980392, 0.501961, 0.745098, 1)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = -4.0
-offset_right = -12.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-texture = ExtResource("1_bi3o0")
-expand_mode = 2
-stretch_mode = 1
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 330.0
-offset_top = 18.0
-offset_right = 797.0
-offset_bottom = 571.0
-
-[node name="Panel" type="Panel" parent="ColorRect"]
-layout_mode = 0
-offset_left = -74.0
-offset_top = -11.0
-offset_right = 468.0
-offset_bottom = 585.0
-scale = Vector2(1.05, 1.05)
-theme_override_styles/panel = SubResource("StyleBoxFlat_0ra2v")
 
 [node name="Control" type="Control" parent="."]
 custom_minimum_size = Vector2(10, 10)
