@@ -6,6 +6,9 @@ func _ready():
 	var node = load(Global.map)
 	var cena = node.instantiate()
 	add_child(cena)
+
+
+	
 	pass
 
 

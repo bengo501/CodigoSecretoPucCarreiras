@@ -447,17 +447,16 @@ offset_right = 1199.0
 offset_bottom = 523.0
 scale = Vector2(0.7, 0.7)
 
-[node name="Cronometro" parent="." instance=ExtResource("5_rwo3j")]
-visible = false
+[node name="Cronometro" parent="Control2" instance=ExtResource("5_rwo3j")]
 z_index = 1000
 z_as_relative = false
-position = Vector2(-19, -15)
+position = Vector2(21, 22)
 scale = Vector2(0.556774, 0.5525)
 
-[node name="Opcoes" parent="." instance=ExtResource("12_kojxi")]
+[node name="Opcoes" parent="Control2" instance=ExtResource("12_kojxi")]
 visible = false
 z_index = 1000
-position = Vector2(-22, -15)
+position = Vector2(18, 18)
 scale = Vector2(1.02514, 1.01997)
 
 [node name="VencedorScene" parent="." instance=ExtResource("16_8y0qi")]

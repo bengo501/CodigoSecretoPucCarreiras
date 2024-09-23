@@ -12,4 +12,9 @@ func _process(delta):
 
 
 func _on_pressed():
-	Global.isOptionsVisi = true
+	Global.showCrono = false
+	if !Global.timer_on:
+		Global.changeTurn()
+	else:
+		Global.timer_on = false
+	pass # Replace with function body.

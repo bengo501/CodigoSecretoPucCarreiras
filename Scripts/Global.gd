@@ -5,7 +5,12 @@ var map = "res://Scenes/Mapas/Mapa5-2.tscn"
 var maxNumMaps = 16
 var rng = RandomNumberGenerator.new()
 var isPinkTurn = true
-   
+var isLockPressed = false
+var isOptionsVisi = false
+var isCronoVisi = false
+var showCrono = false
+var timer_on = false
+var isResetPress = false
 
 func addPink(add:int):
 	pinkScore+=add
@@ -19,8 +24,10 @@ func getBlueScore()->int:
 	return blueScore
 	
 func reset():
+	isPinkTurn = true
 	blueScore = 0
 	pinkScore = 0
+	isResetPress = true
 	
 func setMap(i:int)->void:
 	if i > maxNumMaps:

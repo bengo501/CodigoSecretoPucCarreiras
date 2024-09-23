@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c5p1w1nea828w" path="res://Scenes/Cartas/CartaTestRosa.tscn" id="3_g1ybj"]
 
 [node name="GameScene" type="Control"]
+z_as_relative = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +15,7 @@ offset_right = 15.0
 offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Control" type="Control" parent="."]
 custom_minimum_size = Vector2(10, 10)
@@ -22,6 +24,7 @@ offset_left = -10.0
 offset_top = -17.0
 offset_right = 80.0
 offset_bottom = 104.0
+mouse_filter = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 0
@@ -30,10 +33,12 @@ offset_top = 32.0
 offset_right = 1089.0
 offset_bottom = 868.0
 scale = Vector2(0.7, 0.7)
+mouse_filter = 2
 
 [node name="Gc-1-Linha" type="GridContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 2
+mouse_filter = 2
 theme_override_constants/h_separation = 200
 theme_override_constants/v_separation = 0
 columns = 8

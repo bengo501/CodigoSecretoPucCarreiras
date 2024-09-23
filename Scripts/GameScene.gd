@@ -4,6 +4,7 @@ extends Control
 @onready var blueB = $"BrasaoAzul"
 @onready var pink = $"BG-Rosa"
 @onready var pinkB = $BrasaoRosa
+@onready var crono =$Cronometro
 var timer = 0 
 
 
@@ -16,6 +17,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	changeBackGround()
+	if n == "GameScene": return
+	if Global.showCrono:
+		crono.visible = true
+	else:
+		crono.visible = false
 	
 	
 func changeBackGround():

@@ -12,4 +12,5 @@ func _process(delta):
 
 
 func _on_pressed():
-	Global.isOptionsVisi = true
+	Global.isOptionsVisi = false
+	pass # Replace with function body.

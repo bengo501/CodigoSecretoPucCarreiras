@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://v2pn4ms7h6ev"]
+[gd_scene load_steps=13 format=3 uid="uid://v2pn4ms7h6ev"]
 
 [ext_resource type="Script" path="res://Scripts/Placar.gd" id="1_cgdl7"]
 [ext_resource type="FontFile" uid="uid://dusayyky20wwd" path="res://Assets/Fonts/ProudlyBold-MVVwB.ttf" id="1_co3cl"]
@@ -9,9 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cji8f4qqmvukx" path="res://Assets/Misc/medal2.png" id="4_3ttn3"]
 [ext_resource type="Script" path="res://Scripts/MarcaCartas.gd" id="4_covpg"]
 [ext_resource type="Texture2D" uid="uid://cvnubvph514dd" path="res://Assets/Misc/medal1.png" id="5_os6ty"]
-[ext_resource type="Script" path="res://Scripts/Pontuação_Rosa.gd" id="6_do74n"]
 [ext_resource type="Texture2D" uid="uid://d10iq11l5rl7i" path="res://Assets/Misc/checkmark.png" id="6_sbecd"]
-[ext_resource type="Script" path="res://Scripts/Pontuação_Azul.gd" id="12_tf23x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8exle"]
 bg_color = Color(0.701961, 0.686275, 0.701961, 1)
@@ -133,7 +131,6 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("1_co3cl")
 theme_override_font_sizes/font_size = 50
 text = "00"
-script = ExtResource("6_do74n")
 
 [node name="Somar_Rosa" type="Button" parent="ColorRect/Time_Rosa"]
 modulate = Color(1, 1, 1, 0.517647)
@@ -245,7 +242,6 @@ theme_override_fonts/font = ExtResource("1_co3cl")
 theme_override_font_sizes/font_size = 50
 text = "00
 "
-script = ExtResource("12_tf23x")
 
 [node name="Somar_Azul" type="Button" parent="ColorRect/Time_Azul"]
 modulate = Color(1, 1, 1, 0.517647)

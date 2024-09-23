@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://07igjj26p6nv"]
+[gd_scene load_steps=7 format=3 uid="uid://07igjj26p6nv"]
 
 [ext_resource type="Texture2D" uid="uid://sde0swdhtxnb" path="res://Assets/Cards/Chama no zap! Post para instagram. Arte para pedidos online. Lettering em Português do Brasil. Editável (1).png" id="1_yvl7n"]
+[ext_resource type="Script" path="res://Scripts/Carta.gd" id="1_yxhis"]
 [ext_resource type="Texture2D" uid="uid://185i444pbnqx" path="res://Assets/Cards/CuteCards.png" id="2_1s1pd"]
 [ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="3_11v3b"]
 [ext_resource type="Texture2D" uid="uid://bvixacrs7lb01" path="res://Assets/Cards/Chama no zap! Post para instagram. Arte para pedidos online. Lettering em Português do Brasil. Editável.png" id="4_ypfvy"]
@@ -20,6 +21,7 @@ offset_right = 112.0
 offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Button" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -28,6 +30,7 @@ offset_left = 85.0
 offset_top = 30.0
 offset_right = 227.0
 offset_bottom = 215.0
+script = ExtResource("1_yxhis")
 
 [node name="CardFront2" type="TextureRect" parent="Button"]
 modulate = Color(1, 1, 0, 0.34902)
@@ -52,6 +55,7 @@ offset_left = 16.0
 offset_top = 14.0
 offset_right = 113.0
 offset_bottom = 163.0
+mouse_filter = 2
 
 [node name="TipoAction_Mimica" type="Label" parent="Button/CardFront"]
 modulate = Color(0, 0, 0, 1)
@@ -100,6 +104,7 @@ offset_top = 2.0
 offset_right = 1309.0
 offset_bottom = 1752.0
 scale = Vector2(0.1, 0.1)
+mouse_filter = 2
 texture = ExtResource("1_yvl7n")
 
 [node name="CardBackRosa" type="TextureRect" parent="Button/CardFront"]
@@ -109,4 +114,7 @@ offset_left = -7.0
 offset_right = 1403.0
 offset_bottom = 1810.0
 scale = Vector2(0.1, 0.1)
+mouse_filter = 2
 texture = ExtResource("4_ypfvy")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
