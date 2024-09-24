@@ -1,10 +1,10 @@
 extends Control
 @onready var n = get_name()
 @onready var blue = get_node("BG-Azul")
-@onready var blueB = $"BrasaoAzul"
 @onready var pink = $"BG-Rosa"
-@onready var pinkB = $BrasaoRosa
 @onready var crono =$Cronometro
+@onready var winnerBlue = $VencedorScene
+@onready var winnerPink = $VencedorScene2
 var timer = 0 
 
 
@@ -22,21 +22,23 @@ func _process(delta):
 		crono.visible = true
 	else:
 		crono.visible = false
+		
+	if Global.hasAWinner:
+		if Global.pinkScore >=8:
+			winnerPink.visible = true
+		else:
+			winnerBlue.visible = true
 	
 	
 func changeBackGround():
 	if n == "GameScene": return
 	if Global.isPinkTurn:
 		blue.visible = false
-		blueB.visible = false
 		pink.visible = true
-		pinkB.visible = true
 		pass
 	else:
 		pink.visible = false
-		pinkB.visible = false
 		blue.visible = true
-		blueB.visible = true
 		pass
 		
 

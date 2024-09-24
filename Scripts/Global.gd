@@ -11,11 +11,19 @@ var isCronoVisi = false
 var showCrono = false
 var timer_on = false
 var isResetPress = false
+var hasAWinner = false
+
+func checkWinner():
+	if pinkScore >= 8 || blueScore >=8:
+		hasAWinner = true
 
 func addPink(add:int):
 	pinkScore+=add
+	checkWinner()
+	
 func addBlue(add:int):
 	blueScore+=add
+	checkWinner()
 
 func getPinkScore()->int:
 	return pinkScore
@@ -24,10 +32,16 @@ func getBlueScore()->int:
 	return blueScore
 	
 func reset():
-	isPinkTurn = true
-	blueScore = 0
 	pinkScore = 0
-	isResetPress = true
+	blueScore = 0
+	isPinkTurn = true
+	isLockPressed = false
+	isOptionsVisi = false
+	isCronoVisi = false
+	showCrono = false
+	timer_on = false
+	isResetPress = false
+	hasAWinner = false
 	
 func setMap(i:int)->void:
 	if i > maxNumMaps:

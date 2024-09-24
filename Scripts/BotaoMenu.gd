@@ -12,6 +12,7 @@ func _process(delta):
 
 func _on_pressed():
 	SceneTransition.change_scene("res://Scenes/CenasJogo/MenuScene.tscn")
+	Global.reset()
 
 
 func _on__pressed():
