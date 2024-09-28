@@ -12,6 +12,9 @@ var showCrono = false
 var timer_on = false
 var isResetPress = false
 var hasAWinner = false
+var cardNumber = 0
+var cronoType = 0
+var cronoText = 0
 
 func checkWinner():
 	if pinkScore >= 8 || blueScore >=8:
@@ -51,7 +54,12 @@ func setMap(i:int)->void:
 		rng.randomize()
 		i = rng.randi_range(2, 16)
 	map ="res://Scenes/Mapas/Mapa5-%d.tscn" % i
-	
+
+func getNumberCard():
+	cardNumber+=1
+	if cardNumber>2:
+		cardNumber = 0
+	return cardNumber
 func changeTurn():
 	isPinkTurn = !isPinkTurn
 	

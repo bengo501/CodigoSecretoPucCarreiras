@@ -1,5 +1,5 @@
 extends Button
-
+@onready var timerLabel = $"../Painel_Main/Box-Tempo/Tempo"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,6 +12,8 @@ func _process(delta):
 
 
 func _on_pressed():
+	if timerLabel != null:
+		timerLabel.text = "00:00"
 	Global.showCrono = false
 	if !Global.timer_on:
 		Global.changeTurn()

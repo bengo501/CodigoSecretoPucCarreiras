@@ -1,6 +1,6 @@
 extends Label
 
-var defaultValue = 2
+var defaultValue = 60
 var time = defaultValue
 var format_s = "%d"
 var format_s2 = "0%d"
@@ -30,6 +30,8 @@ func _process(delta):
 	pass
 
 func _on_começar_pressed():
+	if Global.cronoType==1:
+		time = 120
 	if(!Global.timer_on):
 		Global.timer_on = true
 	else:

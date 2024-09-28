@@ -2,6 +2,8 @@ extends Control
 @onready var n = get_name()
 @onready var blue = get_node("BG-Azul")
 @onready var pink = $"BG-Rosa"
+@onready var escolheRosa = $AvisoCartaRosa
+@onready var escolheAzul = $AvisoCartaAzal
 @onready var crono =$Cronometro
 @onready var winnerBlue = $VencedorScene
 @onready var winnerPink = $VencedorScene2
@@ -35,10 +37,14 @@ func changeBackGround():
 	if Global.isPinkTurn:
 		blue.visible = false
 		pink.visible = true
+		escolheAzul.visible = false
+		escolheRosa.visible = true
 		pass
 	else:
 		pink.visible = false
 		blue.visible = true
+		escolheAzul.visible = true
+		escolheRosa.visible = false
 		pass
 		
 
