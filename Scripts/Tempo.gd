@@ -10,7 +10,7 @@ var paused = false
 
 
 func _process(delta):
-	if(!Global.timer_on && !paused):
+	if(!Global.timer_on):
 		if Global.cronoType==1:
 			time = 120
 		else:

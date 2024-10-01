@@ -208,7 +208,7 @@ layout_mode = 0
 offset_left = 99.0
 offset_top = 204.0
 offset_right = 396.0
-offset_bottom = 291.0
+offset_bottom = 293.0
 theme_override_fonts/font = ExtResource("5_5pg6y")
 theme_override_font_sizes/font_size = 60
 text = "Começar"
@@ -217,10 +217,10 @@ script = ExtResource("6_gf0n8")
 
 [node name="BotaoTabuleiros" type="Button" parent="Control/Painel_Main"]
 layout_mode = 0
-offset_left = 98.0
-offset_top = 305.0
-offset_right = 398.0
-offset_bottom = 377.0
+offset_left = 100.0
+offset_top = 301.0
+offset_right = 396.0
+offset_bottom = 381.0
 theme_override_fonts/font = ExtResource("5_5pg6y")
 theme_override_font_sizes/font_size = 62
 text = "Tabuleiros"
@@ -229,10 +229,10 @@ script = ExtResource("7_cljk7")
 
 [node name="BotaoSair" type="Button" parent="Control/Painel_Main"]
 layout_mode = 0
-offset_left = 102.0
-offset_top = 387.0
-offset_right = 401.0
-offset_bottom = 453.0
+offset_left = 100.0
+offset_top = 390.0
+offset_right = 396.0
+offset_bottom = 456.0
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("5_5pg6y")
 theme_override_font_sizes/font_size = 55

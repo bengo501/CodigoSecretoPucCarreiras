@@ -13,3 +13,11 @@ func _process(_delta):
 	else:
 		visible = false
 	pass
+
+
+func _on_botao_desligar_som_pressed():
+	AudioPlayer.pause_music()
+
+
+func _on_botao_ligar_som_pressed():
+	AudioPlayer.unpause_music()

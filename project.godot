@@ -22,7 +22,10 @@ Placar="*res://Scripts/Placar.gd"
 PlacarScene="*res://Scenes/CenasJogo/Placar.tscn"
 Global="*res://Scripts/Global.gd"
 GameScene="*res://Scripts/GameScene.gd"
+AudioPlayer="*res://Scenes/Global/audio_player.tscn"
 
 [display]
 
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 mouse_cursor/custom_image="res://Assets/Cursor/hand_point.png"

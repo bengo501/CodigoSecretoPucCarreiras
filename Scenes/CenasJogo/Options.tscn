@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://Scripts/Control.gd" id="1_eo3w7"]
 [ext_resource type="Script" path="res://Scripts/Options.gd" id="1_i7ar2"]
 [ext_resource type="FontFile" uid="uid://ceurk1i16trqk" path="res://Assets/Fonts/FontypeRounded-rgJJ7.ttf" id="2_4kx52"]
-[ext_resource type="FontFile" uid="uid://huudx1y7jom3" path="res://Assets/Fonts/Stacked pixel.ttf" id="3_05kfr"]
 [ext_resource type="FontFile" uid="uid://dusayyky20wwd" path="res://Assets/Fonts/ProudlyBold-MVVwB.ttf" id="3_hqjp4"]
 [ext_resource type="Texture2D" uid="uid://bsd46t2wvr0pg" path="res://Assets/Misc/audioOff.png" id="4_rsdr2"]
 [ext_resource type="Texture2D" uid="uid://c10f3ki3fejt3" path="res://Assets/Misc/audioOn.png" id="5_xeqhp"]
 [ext_resource type="Texture2D" uid="uid://dpubekmtjkesh" path="res://Assets/Misc/musicOff.png" id="7_4bcg4"]
+[ext_resource type="Script" path="res://Scripts/Slider_NivelVolume.gd" id="7_fccn0"]
 [ext_resource type="Texture2D" uid="uid://cc44041kdfeut" path="res://Assets/Misc/musicOn.png" id="8_hqk31"]
 [ext_resource type="Texture2D" uid="uid://cgbngxd5ev1y5" path="res://Assets/Misc/arrowLeft.png" id="9_r84bm"]
 [ext_resource type="Animation" uid="uid://df7a17j0ir7xw" path="res://Assets/Animations/fade_out.res" id="10_gm8ek"]
@@ -78,10 +78,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_680cu")
 
 [node name="Botao_DesligarSom" type="Button" parent="Control/Painel"]
 layout_mode = 0
-offset_left = 28.0
-offset_top = 160.0
-offset_right = 359.0
-offset_bottom = 231.0
+offset_left = 29.0
+offset_top = 230.0
+offset_right = 398.0
+offset_bottom = 301.0
 theme_override_fonts/font = ExtResource("3_hqjp4")
 theme_override_font_sizes/font_size = 60
 text = "Desligar som"
@@ -89,10 +89,10 @@ icon = ExtResource("4_rsdr2")
 
 [node name="Botao_LigarSom" type="Button" parent="Control/Painel"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 86.0
-offset_right = 356.0
-offset_bottom = 151.0
+offset_left = 29.0
+offset_top = 135.0
+offset_right = 396.0
+offset_bottom = 206.0
 theme_override_fonts/font = ExtResource("3_hqjp4")
 theme_override_font_sizes/font_size = 60
 text = "ligar som"
@@ -100,10 +100,14 @@ icon = ExtResource("5_xeqhp")
 
 [node name="Slider_NivelVolume" type="HSlider" parent="Control/Painel"]
 layout_mode = 0
-offset_left = 27.0
-offset_top = 34.0
-offset_right = 333.0
-offset_bottom = 98.0
+offset_left = 28.0
+offset_top = 57.0
+offset_right = 394.0
+offset_bottom = 121.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("7_fccn0")
+bus_name = "Music"
 
 [node name="NívelVolume" type="Label" parent="Control/Painel/Slider_NivelVolume"]
 modulate = Color(0, 0, 0, 1)
@@ -117,21 +121,6 @@ theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("2_4kx52")
 theme_override_font_sizes/font_size = 40
 text = "nível volume"
-
-[node name="PorcentagemVolume" type="Label" parent="Control/Painel/Slider_NivelVolume"]
-modulate = Color(0.631373, 0.631373, 0.631373, 1)
-layout_mode = 0
-offset_left = 319.0
-offset_top = -11.0
-offset_right = 552.0
-offset_bottom = 44.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 4
-theme_override_constants/shadow_offset_y = 4
-theme_override_constants/shadow_outline_size = 2
-theme_override_fonts/font = ExtResource("3_05kfr")
-theme_override_font_sizes/font_size = 60
-text = "0%"
 
 [node name="Título_Opções" type="Label" parent="Control"]
 layout_mode = 0
@@ -166,6 +155,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("11_mjqls")
 
 [node name="Volume" type="Label" parent="Control"]
+visible = false
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 372.0
@@ -242,4 +232,6 @@ libraries = {
 "": SubResource("AnimationLibrary_53j4w")
 }
 
+[connection signal="pressed" from="Control/Painel/Botao_DesligarSom" to="." method="_on_botao_desligar_som_pressed"]
+[connection signal="pressed" from="Control/Painel/Botao_LigarSom" to="." method="_on_botao_ligar_som_pressed"]
 [connection signal="pressed" from="Control/Botao_Voltar" to="Control/Botao_Voltar" method="_on_pressed"]
