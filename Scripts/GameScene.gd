@@ -5,6 +5,7 @@ extends Control
 @onready var escolheRosa = $AvisoCartaRosa
 @onready var escolheAzul = $AvisoCartaAzal
 @onready var crono =$Cronometro
+@onready var tutorial = $TutorialScene
 @onready var winnerBlue = $VencedorScene
 @onready var winnerPink = $VencedorScene2
 var timer = 0 
@@ -24,6 +25,12 @@ func _process(delta):
 		crono.visible = true
 	else:
 		crono.visible = false
+		
+	if Global.isTutorialVisi:
+		tutorial.visible = true
+	else:
+		tutorial.visible = false
+		
 		
 	if Global.hasAWinner:
 		if Global.pinkScore >=8:

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://tu1dn2r4n1c3"]
+[gd_scene load_steps=8 format=3 uid="uid://tu1dn2r4n1c3"]
 
 [ext_resource type="Texture2D" uid="uid://bxx80nubvle05" path="res://Assets/Background/Gingham medium A 2.png" id="1_4qksv"]
 [ext_resource type="FontFile" uid="uid://dusayyky20wwd" path="res://Assets/Fonts/ProudlyBold-MVVwB.ttf" id="2_m6vvg"]
 [ext_resource type="Texture2D" uid="uid://dahvtvn8gjjd1" path="res://Assets/Misc/question.png" id="3_alegl"]
 [ext_resource type="Texture2D" uid="uid://cgbngxd5ev1y5" path="res://Assets/Misc/arrowLeft.png" id="4_r4dak"]
 [ext_resource type="FontFile" uid="uid://ceurk1i16trqk" path="res://Assets/Fonts/FontypeRounded-rgJJ7.ttf" id="5_7oe4i"]
+[ext_resource type="Script" path="res://Scripts/BotaoTutorial.gd" id="6_kl05d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ga6ux"]
 bg_color = Color(1, 1, 1, 1)
@@ -115,6 +116,7 @@ theme_override_font_sizes/font_size = 80
 text = "Voltar
 "
 icon = ExtResource("4_r4dak")
+script = ExtResource("6_kl05d")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -132,3 +134,5 @@ text = "Regras do jogo:
 3. DO JOGO 
 4. CÓDIGO 
 5. SECRETO"
+
+[connection signal="pressed" from="Botao_Voltar" to="Botao_Voltar" method="_on_pressed"]

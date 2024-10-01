@@ -7,6 +7,7 @@ var rng = RandomNumberGenerator.new()
 var isPinkTurn = true
 var isLockPressed = false
 var isOptionsVisi = false
+var isTutorialVisi = false
 var isCronoVisi = false
 var showCrono = false
 var timer_on = false

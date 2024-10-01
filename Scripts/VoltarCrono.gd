@@ -19,4 +19,4 @@ func _on_pressed():
 		Global.changeTurn()
 	else:
 		Global.timer_on = false
-	pass # Replace with function body.
+		Global.changeTurn()

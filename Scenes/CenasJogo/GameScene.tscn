@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://e2pjtaep7qr"]
+[gd_scene load_steps=27 format=3 uid="uid://e2pjtaep7qr"]
 
 [ext_resource type="Script" path="res://Scripts/GameScene.gd" id="1_2ube0"]
 [ext_resource type="Texture2D" uid="uid://ddpo86ttcmgc1" path="res://Assets/Background/Chess big 2.png" id="1_05443"]
@@ -23,6 +23,7 @@
 [ext_resource type="Script" path="res://Scripts/BotaoComoJogar.gd" id="16_d6hg7"]
 [ext_resource type="Script" path="res://Scripts/CarregaMapa.gd" id="17_fippr"]
 [ext_resource type="PackedScene" uid="uid://cnx3vwl5184ts" path="res://Scenes/CenasJogo/VencedorSceneRosa.tscn" id="23_of61w"]
+[ext_resource type="PackedScene" uid="uid://tu1dn2r4n1c3" path="res://Scenes/CenasJogo/TutorialScene.tscn" id="24_eekhx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ra2v"]
 bg_color = Color(1, 1, 1, 1)
@@ -473,6 +474,13 @@ offset_bottom = 2.0
 [node name="VencedorScene2" parent="." instance=ExtResource("23_of61w")]
 visible = false
 layout_mode = 1
+
+[node name="TutorialScene" parent="." instance=ExtResource("24_eekhx")]
+layout_mode = 1
+offset_left = -19.0
+offset_top = -15.0
+offset_right = -19.0
+offset_bottom = -15.0
 
 [connection signal="pressed" from="Panel/Restart" to="Panel/Restart" method="_on_pressed"]
 [connection signal="pressed" from="Panel/Exit" to="Panel/Exit" method="_on_pressed"]
